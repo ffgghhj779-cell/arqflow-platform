@@ -212,7 +212,7 @@ export default function DashboardShell({ profile, business, capabilities, unread
           <div className="flex items-center justify-between mb-3">
             <Link href="/dashboard/overview" className="flex items-center gap-2">
               <motion.div
-                className="w-8 h-8 rounded-xl bg-gradient-to-br from-[var(--accent)] to-[#0d2236] flex items-center justify-center shadow-md"
+                className="w-8 h-8 rounded-xl bg-gradient-to-br from-[var(--accent)] to-[#2b6f77] flex items-center justify-center shadow-md"
                 whileHover={{ scale: 1.08, rotate: 3 }}
                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
               >

@@ -39,7 +39,7 @@ const SPRING_FORCE   = 0.085;    // return spring
 const FRICTION       = 0.82;     // damping
 
 const LIGHT_COLOR_STOPS: [number, string][] = [
-  [0.0,  "#0d2236"],   // midnight navy
+  [0.0,  "#2b6f77"],   // midnight navy
   [0.25, "#0b6b5d"],   // deep teal
   [0.6,  "#12a08a"],   // vibrant teal
   [0.85, "#06b6d4"],   // bright cyan

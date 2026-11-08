@@ -56,9 +56,9 @@ export default function SimulatorClient({ business }: { business: any }) {
   };
 
   return (
-    <div className="flex flex-col h-full bg-slate-50 dark:bg-gradient-to-br dark:from-[#0B1423] dark:to-[#12233D] rounded-3xl border border-slate-200 dark:border-white/10 shadow-xl dark:shadow-2xl overflow-hidden relative">
+    <div className="flex flex-col h-full bg-slate-50 dark:bg-gradient-to-br dark:from-[#1a2f3c] dark:to-[#21394a] rounded-3xl border border-slate-200 dark:border-white/10 shadow-xl dark:shadow-2xl overflow-hidden relative">
       {/* HEADER */}
-      <div className="flex flex-col sm:flex-row items-center justify-between p-4 sm:p-5 border-b border-slate-200 dark:border-white/10 bg-white/80 dark:bg-[#0B1423]/80 backdrop-blur-md z-10 gap-4">
+      <div className="flex flex-col sm:flex-row items-center justify-between p-4 sm:p-5 border-b border-slate-200 dark:border-white/10 bg-white/80 dark:bg-[#1a2f3c]/80 backdrop-blur-md z-10 gap-4">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-brand-teal flex items-center justify-center shrink-0">
             <Bot className="w-6 h-6 text-white" />
@@ -101,7 +101,7 @@ export default function SimulatorClient({ business }: { business: any }) {
       </div>
 
       {/* INPUT AREA */}
-      <div className="p-4 sm:p-5 border-t border-slate-200 dark:border-white/10 bg-white/90 dark:bg-[#0B1423]/90 backdrop-blur-md">
+      <div className="p-4 sm:p-5 border-t border-slate-200 dark:border-white/10 bg-white/90 dark:bg-[#1a2f3c]/90 backdrop-blur-md">
         <form onSubmit={handleSend} className="relative flex items-center">
           <input
             type="text"

@@ -77,7 +77,7 @@ export function WebsiteChatbotModal({
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 50, scale: 0.9 }}
           transition={{ type: "spring", damping: 25, stiffness: 200 }}
-          className="fixed bottom-6 left-6 z-[100] w-[380px] max-w-[calc(100vw-3rem)] h-[550px] max-h-[calc(100vh-6rem)] bg-white dark:bg-[#0f172a] rounded-2xl shadow-2xl border border-gray-100 dark:border-gray-800 flex flex-col overflow-hidden"
+          className="fixed bottom-6 left-6 z-[100] w-[380px] max-w-[calc(100vw-3rem)] h-[550px] max-h-[calc(100vh-6rem)] bg-white dark:bg-[#1a2f3c] rounded-2xl shadow-2xl border border-gray-100 dark:border-gray-800 flex flex-col overflow-hidden"
           dir="rtl"
         >
           {/* Header */}
@@ -102,7 +102,7 @@ export function WebsiteChatbotModal({
           </div>
 
           {/* Messages Area */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50 dark:bg-[#020817]">
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50 dark:bg-[#162936]">
             {messages.map((msg, idx) => (
               <div
                 key={idx}
@@ -146,7 +146,7 @@ export function WebsiteChatbotModal({
           </div>
 
           {/* Input Area */}
-          <div className="p-3 bg-white dark:bg-[#0f172a] border-t border-gray-100 dark:border-gray-800">
+          <div className="p-3 bg-white dark:bg-[#1a2f3c] border-t border-gray-100 dark:border-gray-800">
             <form
               onSubmit={(e) => {
                 e.preventDefault();

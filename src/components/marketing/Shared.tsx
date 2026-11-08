@@ -365,7 +365,7 @@ export function CTABanner({
       <div
         className="absolute inset-0 -z-0"
         style={{
-          background: "linear-gradient(135deg, #2a6b73 0%, #0d2236 50%, #0d2a2a 100%)",
+          background: "linear-gradient(135deg, #2b6f77 0%, #3a8f9a 55%, #12a08a 100%)",
         }}
         aria-hidden
       />
