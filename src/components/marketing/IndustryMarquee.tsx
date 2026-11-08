@@ -25,7 +25,7 @@ export function IndustryMarquee() {
   const marqueeItems = [...items, ...items, ...items];
 
   return (
-    <div className="w-full py-8 border-b border-app overflow-hidden bg-[rgba(var(--accent-rgb),0.02)] relative select-none">
+    <div className="w-full py-8 border-b border-app overflow-hidden bg-[rgba(var(--accent-rgb),0.02)] relative select-none touch-pan-y">
       {/* Edge gradient masks for seamless fade */}
       <div className="absolute inset-y-0 start-0 w-24 sm:w-40 bg-gradient-to-r rtl:bg-gradient-to-l from-[var(--bg)] to-transparent z-10 pointer-events-none" />
       <div className="absolute inset-y-0 end-0 w-24 sm:w-40 bg-gradient-to-l rtl:bg-gradient-to-r from-[var(--bg)] to-transparent z-10 pointer-events-none" />

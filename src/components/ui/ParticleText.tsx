@@ -194,7 +194,7 @@ export default function ParticleText({
     }
 
     // Limit particles for buttery smooth 60fps/120fps performance
-    const maxParticles = w < 768 ? 850 : 2500;
+    const maxParticles = w < 768 ? 480 : 2500;
     if (pts.length > maxParticles) {
       pts.sort(() => Math.random() - 0.5);
       pts.length = maxParticles;
@@ -352,7 +352,12 @@ export default function ParticleText({
       });
     }
 
+    const isTouchDevice =
+      typeof window !== "undefined" &&
+      (window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 768);
+
     const handleWindowPointerMove = (e: PointerEvent) => {
+      if (e.pointerType === "touch") return;
       const canvas = canvasRef.current;
       if (!canvas) return;
       const rect = canvas.getBoundingClientRect();
@@ -368,6 +373,7 @@ export default function ParticleText({
     };
 
     const handleWindowPointerDown = (e: PointerEvent) => {
+      if (e.pointerType === "touch") return;
       const canvas = canvasRef.current;
       if (!canvas) return;
       const rect = canvas.getBoundingClientRect();
@@ -413,15 +419,19 @@ export default function ParticleText({
       observer.observe(container);
     }
 
-    window.addEventListener("pointermove", handleWindowPointerMove, { passive: true });
-    window.addEventListener("pointerdown", handleWindowPointerDown, { passive: true });
-    window.addEventListener("pointerleave", handleWindowPointerLeave, { passive: true });
+    if (!isTouchDevice) {
+      window.addEventListener("pointermove", handleWindowPointerMove, { passive: true });
+      window.addEventListener("pointerdown", handleWindowPointerDown, { passive: true });
+      window.addEventListener("pointerleave", handleWindowPointerLeave, { passive: true });
+    }
     window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("pointermove", handleWindowPointerMove);
-      window.removeEventListener("pointerdown", handleWindowPointerDown);
-      window.removeEventListener("pointerleave", handleWindowPointerLeave);
+      if (!isTouchDevice) {
+        window.removeEventListener("pointermove", handleWindowPointerMove);
+        window.removeEventListener("pointerdown", handleWindowPointerDown);
+        window.removeEventListener("pointerleave", handleWindowPointerLeave);
+      }
       window.removeEventListener("resize", handleResize);
       observer?.disconnect();
       cancelAnimationFrame(rafId.current);
@@ -433,13 +443,15 @@ export default function ParticleText({
     <div
       ref={containerRef}
       dir="ltr"
-      className={`relative select-none pointer-events-none ${className}`}
+      className={`relative select-none pointer-events-none touch-pan-y ${className}`}
       aria-hidden="true"
+      style={{ touchAction: "pan-y" }}
     >
       <canvas
         ref={canvasRef}
         dir="ltr"
         className="block w-full h-full pointer-events-none"
+        style={{ touchAction: "pan-y" }}
       />
     </div>
   );

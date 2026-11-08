@@ -406,25 +406,28 @@ export function CTABanner({
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="badge-premium inline-flex items-center gap-2 mb-6">
+            <span className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-white/15 text-white border border-white/25 shadow-sm backdrop-blur-sm">
               ✦ {t.badge}
             </span>
           </motion.div>
 
           {/* Headline */}
           <motion.h2
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-[1.1] pb-1"
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold !text-white leading-[1.1] pb-1"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="text-white">{title ?? t.title}</span>
+            <span className="!text-white drop-shadow-sm" style={{ color: "#ffffff" }}>
+              {title ?? t.title}
+            </span>
           </motion.h2>
 
           {/* Subtitle */}
           <motion.p
-            className="mt-5 text-white/90 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto"
+            className="mt-5 text-white text-base sm:text-lg leading-relaxed max-w-2xl mx-auto"
+            style={{ color: "#ffffff", opacity: 0.95 }}
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
