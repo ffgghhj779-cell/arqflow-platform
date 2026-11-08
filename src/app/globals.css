@@ -848,3 +848,20 @@ select.input-base option { background: var(--bg); color: var(--fg); }
   to   { transform: rotate(360deg); }
 }
 .animate-spin-slow { animation: spin-slow 12s linear infinite; }
+
+/* Continuous Marquee Animation */
+@keyframes marquee-ltr {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-33.333%); }
+}
+@keyframes marquee-rtl {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(33.333%); }
+}
+.animate-marquee {
+  animation: marquee-ltr 35s linear infinite;
+  will-change: transform;
+}
+[dir="rtl"] .animate-marquee {
+  animation: marquee-rtl 35s linear infinite;
+}

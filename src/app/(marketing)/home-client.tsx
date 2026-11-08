@@ -20,6 +20,10 @@ import ParticleText from "@/components/ui/ParticleText";
 import { MeshBackground, TiltCard } from "@/components/ui/PremiumEffects";
 import { InteractivePlayground } from "@/components/marketing/InteractivePlayground";
 import { BentoGrid } from "@/components/marketing/BentoGrid";
+import { IndustryMarquee } from "@/components/marketing/IndustryMarquee";
+import { ROICalculator } from "@/components/marketing/ROICalculator";
+import { VoiceNoteSimulator } from "@/components/marketing/VoiceNoteSimulator";
+import { LiveActivityToast } from "@/components/marketing/LiveActivityToast";
 
 /* ================================================================
    HERO
@@ -659,15 +663,19 @@ export default function HomeClient({ plans }: { plans?: Plan[] }) {
   return (
     <>
       <Hero />
+      <IndustryMarquee />
       <StatsBar />
-      <InteractivePlayground />
       <BentoGrid />
+      <VoiceNoteSimulator />
+      <InteractivePlayground />
       <Features />
+      <ROICalculator />
       <HowItWorks />
       <Industries />
       <PricingPreview plans={plans} />
       <HomeFaq />
       <CTABanner />
+      <LiveActivityToast />
     </>
   );
 }
