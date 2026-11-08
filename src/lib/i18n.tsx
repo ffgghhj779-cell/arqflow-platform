@@ -20,14 +20,14 @@ type LangContextValue = {
 };
 
 const LangContext = createContext<LangContextValue>({
-  lang: "ar",
-  dir: "rtl",
+  lang: "en",
+  dir: "ltr",
   setLang: () => {},
-  pick: (pair) => pair.ar,
+  pick: (pair) => pair.en,
 });
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("ar");
+  const [lang, setLangState] = useState<Lang>("en");
   const router = useRouter();
 
   useEffect(() => {
