@@ -26,19 +26,19 @@ function Story() {
       badge: "قصتنا",
       title: "بدأت من مشكلة بنشوفها كل يوم",
       p1: "ArqFlow بدأت بعد ملاحظة بسيطة: كتير من أصحاب المشاريع والعيادات والمطاعم بيضيع عليهم عملاء لأن مفيش وقت كفاية للرد على الرسائل والاستفسارات طول اليوم. المشكلة مش في الخدمة نفسها، لكن في متابعة العملاء بشكل مستمر.",
-      p2: "الحلول الموجودة كانت غالباً معقدة أو مكلفة بالنسبة لمعظم المشاريع الصغيرة والمتوسطة، وكثير منها متصمم لأسواق مختلفة عن السوق المصري. وده خلّى الاستفادة منها أصعب مما المفروض تكون عليه.",
+      p2: "الحلول الموجودة كانت غالباً معقدة أو مكلفة بالنسبة لمعظم المشاريع الصغيرة والمتوسطة، وكثير منها متصمم لأسواق غربية لا تفهم طبيعة العميل العربي وثقافة وسرعة الواتساب. وده خلّى الاستفادة منها صعبة ومكلفة.",
       p3: "عشان كده بنينا ArqFlow. منصة بتساعد الأنشطة التجارية على استخدام الذكاء الاصطناعي في التواصل مع العملاء والرد على الاستفسارات بشكل أسهل وأسرع، من غير تعقيد أو تكاليف مبالغ فيها.",
       mission: "مهمتنا",
-      missionText: "كل بيزنس مصري يستاهل موظف ذكاء اصطناعي — مش بس الشركات الكبيرة اللي معاها ملايين.",
+      missionText: "كل نشاط تجاري في السعودية ومصر يستاهل موظف ذكاء اصطناعي — بدون تعقيد وبأعلى كفاءة.",
     },
     en: {
       badge: "The story",
       title: "Born from a simple observation",
-      p1: "ArqFlow was founded by Mohsen “Razor” Haggag, founder of Al-Haggag Digital Systems, after a pattern he saw in almost every Egyptian business: the shop, clinic, or restaurant owner loses customers daily — not because the product is bad, but because nobody is free to answer WhatsApp.",
-      p2: "The technology to solve this existed, but it was built in English, priced in dollars, and aimed at large enterprises. Nobody had built it for the Egyptian business: in its dialect, in its pound, around how it actually works.",
-      p3: "So we built it ourselves. ArqFlow is a complete system that gives any Egyptian business — from a street-food cart to a private hospital — its own AI employee, installed in minutes, at a fair price in EGP.",
+      p1: "ArqFlow was founded by Mohsen “Razor” Haggag, founder of Al-Haggag Digital Systems, after a pattern seen across ambitious regional businesses: owners lose valuable customers daily simply because nobody is free to answer WhatsApp around the clock.",
+      p2: "The technology to solve this existed, but it was built for foreign markets, priced high, and detached from how local customers actually communicate on WhatsApp.",
+      p3: "So we built ArqFlow: a complete system giving ambitious businesses across Saudi Arabia, Egypt, and the region their own 24/7 AI employee, installed in minutes.",
       mission: "Our mission",
-      missionText: "Every Egyptian business deserves an AI employee — not just the corporations with millions to spend.",
+      missionText: "Every business across Saudi Arabia & Egypt deserves an AI employee — not just corporations with massive budgets.",
     },
   });
 
@@ -81,7 +81,7 @@ function Values() {
       items: [
         { icon: Eye, h: "الوضوح قبل أي حاجة", p: "أسعار معلنة، خطوات واضحة، ووعود نقدر ننفذها. لو حاجة مش هتشتغل لنشاطك، هنقولك قبل ما تدفع." },
         { icon: HeartHandshake, h: "نجاح العميل = نجاحنا", p: "إحنا مش بنبيع اشتراكات — بنبني موظفين أذكياء. البوت اللي مش بيجيب نتيجة لصاحبه، فشل لينا إحنا." },
-        { icon: Sparkles, h: "جودة بمستوى عالمي، بروح مصرية", p: "تصميم وهندسة بمعايير عالمية، لكن بلهجة وفهم وأسعار من السوق المصري نفسه." },
+        { icon: Sparkles, h: "جودة بمستوى عالمي، وهوية عربية أصيلة", p: "تصميم وهندسة بمعايير عالمية، وبلهجة وفهم وتناغم تام مع الأسواق في السعودية ومصر." },
         { icon: ShieldCheck, h: "بياناتك أمانة", p: "بيانات نشاطك ومحادثات عملاءك ملك ليك. بنحميها، وعمرنا ما نبيعها أو نشاركها." },
       ],
     },
@@ -91,7 +91,7 @@ function Values() {
       items: [
         { icon: Eye, h: "Clarity above everything", p: "Published prices, clear steps, promises we can keep. If something won't work for your business, we'll tell you before you pay." },
         { icon: HeartHandshake, h: "Client success = our success", p: "We don't sell subscriptions — we build smart employees. A bot that doesn't deliver results for its owner is our failure." },
-        { icon: Sparkles, h: "World-class quality, Egyptian soul", p: "Design and engineering at global standards, with a dialect, understanding, and pricing from the Egyptian market itself." },
+        { icon: Sparkles, h: "World-class engineering, native identity", p: "Design and engineering at global standards, with deep native understanding of Saudi and Egyptian markets." },
         { icon: ShieldCheck, h: "Your data is a trust", p: "Your business data and your customers' conversations belong to you. We protect them and will never sell or share them." },
       ],
     },
@@ -173,11 +173,11 @@ export default function AboutClient() {
   const t = useT({
     ar: {
       badge: "من نحن",
-      title: "بنبني موظفين أذكياء للبيزنس المصري",
+      title: "بنبني موظفين أذكياء للأنشطة والشركات في السعودية ومصر",
     },
     en: {
       badge: "About us",
-      title: "We build smart employees for Egyptian businesses",
+      title: "We build smart AI employees for businesses across Saudi Arabia & Egypt",
     },
   });
 

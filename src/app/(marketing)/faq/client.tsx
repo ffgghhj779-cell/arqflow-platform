@@ -23,9 +23,9 @@ export default function FaqClient() {
           icon: HelpCircle,
           title: "أسئلة عامة",
           items: [
-            { q: "إيه هو ArqFlow بالظبط؟", a: "ArqFlow هو نظام بيركّب لنشاطك وكيل ذكاء اصطناعي خاص على واتساب: بيرد على عملاءك فوراً ٢٤ ساعة، ياخد الطلبات والحجوزات، يفهم المصري والعربي والإنجليزي، ويحوّل للبشر لما يحتاج. كل ده مع لوحة تحكم تتابع منها كل حاجة." },
-            { q: "هل ArqFlow مناسب لحجم نشاطي؟", a: "لو نشاطك بيستقبل رسائل واتساب من عملاء — فهو مناسب. عندنا باقات تبدأ من ٥٠٠ ج.م شهرياً للنشاط الصغير، وتوصل لباقات إنتربرايز للشركات اللي بتستقبل آلاف الرسائل. شغالين مع مطاعم وعيادات ومحلات وجيمات وعقارات وفنادق وغيرهم." },
-            { q: "إيه الفرق بين ArqFlow وأي شات بوت تاني؟", a: "البوتات التقليدية بترد بقوالب جاهزة وبتقف عند أول سؤال خارج السيناريو. وكيل ArqFlow بيفهم اللغة الطبيعية واللهجة المصرية والرسائل الصوتية، ومتدرّب على بيانات نشاطك أنت تحديداً — فبيرد رد حقيقي مفيد، مش «اختر من القائمة»." },
+            { q: "إيه هو ArqFlow بالظبط؟", a: "ArqFlow هو نظام بيركّب لنشاطك وكيل ذكاء اصطناعي خاص على واتساب: بيرد على عملاءك فوراً ٢٤ ساعة، ياخد الطلبات والحجوزات، يفهم اللهجات المحلية (السعودية والمصرية) والعربية الفصحى والإنجليزي، ويحوّل للبشر لما يحتاج. كل ده مع لوحة تحكم تتابع منها كل حاجة." },
+            { q: "هل ArqFlow مناسب لحجم نشاطي؟", a: "لو نشاطك بيستقبل رسائل واتساب من عملاء — فهو مناسب. عندنا باقات تبدأ من تكلفة اقتصادية تناسب النشاط الصغير، وتوصل لباقات إنتربرايز للشركات اللي بتستقبل آلاف الرسائل. شغالين مع مطاعم وعيادات ومحلات وجيمات وعقارات وفنادق وغيرهم." },
+            { q: "إيه الفرق بين ArqFlow وأي شات بوت تاني؟", a: "البوتات التقليدية بترد بقوالب جاهزة وبتقف عند أول سؤال خارج السيناريو. وكيل ArqFlow بيفهم اللغة الطبيعية واللهجات المحكية (السعودية والمصرية والخليجية) والرسائل الصوتية، ومتدرّب على بيانات نشاطك أنت تحديداً — فبيرد رد حقيقي مفيد، مش «اختر من القائمة»." },
           ],
         },
         {
@@ -42,7 +42,7 @@ export default function FaqClient() {
           icon: CreditCard,
           title: "الفواتير والدفع",
           items: [
-            { q: "إيه طرق الدفع المتاحة؟", a: "إنستاباي، فودافون كاش، ووي باي. بتحوّل المبلغ وترفع صورة إيصال التحويل، وفريقنا بيأكد الدفع وبيبدأ التجهيز فوراً. كل الأسعار بالجنيه المصري." },
+            { q: "إيه طرق الدفع المتاحة؟", a: "نوفر خيارات دفع مرنة تناسب عملاءنا في السعودية ومصر: التحويل البنكي المباشر، البطاقات البنكية، وتطبيقات الدفع الفوري المحلية. بتحوّل المبلغ وترفع صورة إيصال التحويل، وفريقنا بيأكد الدفع وبيبدأ التجهيز فوراً." },
             { q: "هل في عقد سنوي أو التزام طويل؟", a: "لأ. الاشتراك شهري وتقدر تلغيه في أي وقت من غير غرامات — ببساطة مش بيتجدد الشهر التالي. الالتزام الوحيد هو رسوم التأسيس اللي بتتدفع مرة واحدة." },
             { q: "إيه اللي يحصل لو وقفت الاشتراك ورجعت تاني؟", a: "لو رجعت خلال ٩٠ يوم، وكيلك وقاعدة معرفته بيكونوا محفوظين وبنرجّعهم من غير رسوم تأسيس جديدة. بعد ٩٠ يوم ممكن نحتاج رسوم إعادة تجهيز مخفضة." },
           ],
@@ -68,9 +68,9 @@ export default function FaqClient() {
           icon: HelpCircle,
           title: "General",
           items: [
-            { q: "What exactly is ArqFlow?", a: "ArqFlow installs a private AI agent on your business WhatsApp: it answers customers instantly 24/7, takes orders and bookings, understands Egyptian Arabic and English, and escalates to humans when needed. All with a dashboard where you track everything." },
-            { q: "Is ArqFlow right for my business size?", a: "If your business receives WhatsApp messages from customers — it's right for you. Plans start at 500 EGP/month for small businesses and scale to Enterprise for companies handling thousands of messages. We serve restaurants, clinics, stores, gyms, real estate, hotels, and more." },
-            { q: "How is ArqFlow different from other chatbots?", a: "Traditional bots reply with canned templates and break at the first off-script question. An ArqFlow agent understands natural language, Egyptian dialect, and voice messages, and is trained on your specific business data — so it gives genuinely useful answers, not “choose from the menu”." },
+            { q: "What exactly is ArqFlow?", a: "ArqFlow installs a private AI agent on your business WhatsApp: it answers customers instantly 24/7, takes orders and bookings, understands Saudi, Egyptian, and Gulf dialects as well as English, and escalates to humans when needed. All with a dashboard where you track everything." },
+            { q: "Is ArqFlow right for my business size?", a: "If your business receives WhatsApp messages from customers — it's right for you. Flexible plans for emerging ventures and scale up to Enterprise for high-volume operations. We serve restaurants, clinics, stores, gyms, real estate, hotels, and more." },
+            { q: "How is ArqFlow different from other chatbots?", a: "Traditional bots reply with canned templates and break at the first off-script question. An ArqFlow agent understands natural language, native Arabic dialects (Saudi & Egyptian), and voice messages, and is trained on your specific business data — so it gives genuinely useful answers, not “choose from the menu”." },
           ],
         },
         {
@@ -87,7 +87,7 @@ export default function FaqClient() {
           icon: CreditCard,
           title: "Billing",
           items: [
-            { q: "What payment methods are available?", a: "InstaPay, Vodafone Cash, and WE Pay. You transfer the amount and upload a screenshot of the receipt; our team confirms and provisioning starts immediately. All prices are in Egyptian pounds." },
+            { q: "What payment methods are available?", a: "We provide convenient payment options for Saudi Arabia and Egypt: direct bank transfer, credit cards, and approved instant payment apps. Upload your receipt and our team activates your service right away." },
             { q: "Is there an annual contract or long commitment?", a: "No. The subscription is monthly and cancellable anytime without penalties — it simply doesn't renew next month. The only one-time commitment is the setup fee." },
             { q: "What if I pause my subscription and come back?", a: "If you return within 90 days, your agent and its knowledge base are preserved and restored with no new setup fee. After 90 days, a reduced re-provisioning fee may apply." },
           ],

@@ -39,8 +39,8 @@ function Timeline() {
         {
           icon: Wallet,
           h: "٣ — ادفع وارفع الإثبات",
-          p: "حوّل رسوم التأسيس + أول شهر على إنستاباي أو فودافون كاش أو وي باي، وارفع سكرين شوت التحويل في نفس الصفحة. فريقنا بيراجع ويأكّد الدفع بسرعة.",
-          extra: "كل المبالغ بالجنيه المصري، ومفيش أي رسوم مخفية.",
+          p: "حوّل رسوم التأسيس + أول شهر عبر التحويل البنكي المباشر، البطاقات، أو وسائل الدفع الفوري، وارفع إشعار التحويل في نفس الصفحة. فريقنا بيراجع ويأكّد الدفع بسرعة.",
+          extra: "كل المبالغ واضحة بشفافية تامة ومفيش أي رسوم مخفية.",
         },
         {
           icon: Rocket,
@@ -69,8 +69,8 @@ function Timeline() {
         {
           icon: Wallet,
           h: "3 — Pay & upload proof",
-          p: "Transfer the setup fee + first month via InstaPay, Vodafone Cash, or WE Pay, then upload a screenshot of the transfer on the same page. Our team reviews and confirms quickly.",
-          extra: "All amounts in Egyptian pounds, with zero hidden fees.",
+          p: "Transfer the setup fee + first month via direct bank transfer, cards, or supported instant payment apps, then upload the receipt on the same page. Our team reviews and confirms promptly.",
+          extra: "Clear transparent billing with zero hidden fees.",
         },
         {
           icon: Rocket,

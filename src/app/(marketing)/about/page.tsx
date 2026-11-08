@@ -4,7 +4,7 @@ import AboutClient from "./client";
 export const metadata: Metadata = {
   title: "من نحن · About",
   description:
-    "قصة ArqFlow — من تأسيس محسن «رازور» حجاج، Al-Haggag Digital Systems. مهمتنا: كل بيزنس مصري يستاهل موظف ذكاء اصطناعي.",
+    "قصة ArqFlow — موظف ذكاء اصطناعي متكامل لخدمة ومبيعات عملائك ٢٤ ساعة في السعودية ومصر.",
 };
 
 export default function AboutPage() {

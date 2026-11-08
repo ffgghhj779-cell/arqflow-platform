@@ -176,7 +176,7 @@ const DYNAMIC_QUESTIONS: Record<string, QuestionConfig[]> = {
       id: "branches",
       type: "textarea",
       label: { ar: "الفروع، مواعيدها وطريقة الوصول", en: "Branches, Hours & Locations" },
-      placeholder: { ar: "مثال: فرع المهندسين (٢٠ شارع جامعة الدول)، فرع مصر الجديدة (٥ شارع الثورة). كل الفروع مفتوحة من ١٢ ظهراً حتى ١١ مساءً.", en: "e.g. Mohandessin branch (20 Gameat el Dowal St), Heliopolis branch (5 El Thawra St). All branches open 12 PM - 11 PM." }
+      placeholder: { ar: "مثال: فرع الرياض (طريق الملك فهد)، فرع القاهرة (شارع الثورة). كل الفروع مفتوحة من ١٠ صباحاً حتى ١١ مساءً.", en: "e.g. Riyadh branch (King Fahd Rd), Cairo branch (El Thawra St). All branches open 10 AM - 11 PM." }
     }
   ],
   clinic: [
@@ -429,7 +429,7 @@ const DYNAMIC_QUESTIONS: Record<string, QuestionConfig[]> = {
       id: "coverage_areas",
       type: "textarea",
       label: { ar: "النطاق الجغرافي أو شروط تقديم الخدمة", en: "Service Locations & Terms" },
-      placeholder: { ar: "مثال: نقدم خدماتنا عن بعد لجميع العملاء في الوطن العربي ومصر، مع إمكانية التنسيق لاجتماعات حضورية بمقر الشركة.", en: "e.g. We offer remote services for all clients in Egypt and Arab world, with physical meetings at our office if needed." }
+      placeholder: { ar: "مثال: نقدم خدماتنا لجميع العملاء في السعودية ومصر والوطن العربي، مع إمكانية التنسيق لاجتماعات حضورية بمقر الشركة.", en: "e.g. We serve clients across Saudi Arabia, Egypt, and the Arab region, with physical meetings at our office if needed." }
     }
   ],
   other: [
@@ -875,9 +875,9 @@ export default function OnboardingWizard({
       ownerNamePh: "الاسم بالكامل",
       email: "البريد الإلكتروني",
       emailInvalid: "أدخل بريد إلكتروني صحيح",
-      phone: "رقم موبايل المسؤول (للتصعيد والتواصل)",
-      phoneHint: "الرقم الخاص بالمسؤول لاستلام تنبيهات انتهاء الاشتراك وتصعيد المحادثات والتواصل الرسمي (01XXXXXXXXX)",
-      phoneInvalid: "أدخل رقم موبايل مصري صحيح (01XXXXXXXXX)",
+      phone: "رقم جوال المسؤول (للتصعيد والتواصل)",
+      phoneHint: "الرقم الخاص بالمسؤول لاستلام تنبيهات انتهاء الاشتراك وتصعيد المحادثات والتواصل الرسمي (رقم سعودي أو مصري أو دولي)",
+      phoneInvalid: "أدخل رقم هاتف صحيح (مثال: 05XXXXXXXX أو 01XXXXXXXXX)",
       whatsapp: "رقم واتساب البوت (خدمة العملاء)",
       whatsappHint: "الرقم الذي يتواصل به البوت الذكي مع العملاء ويجيب على استفساراتهم",
       phoneMustBeDifferent: "يجب أن يكون رقم البوت مختلفاً تماماً عن رقم المسؤول (خط واتساب مستقل للرد على العملاء)",
@@ -1040,8 +1040,8 @@ export default function OnboardingWizard({
       email: "Email address",
       emailInvalid: "Enter a valid email address",
       phone: "Manager Mobile Number (For Escalations & Alerts)",
-      phoneHint: "Manager's number for subscription alerts, live agent escalations & official updates (01XXXXXXXXX)",
-      phoneInvalid: "Enter a valid Egyptian mobile number (01XXXXXXXXX)",
+      phoneHint: "Manager's number for subscription alerts, live agent escalations & official updates (Saudi, Egyptian, or international)",
+      phoneInvalid: "Enter a valid mobile number (e.g. 05XXXXXXXX or 01XXXXXXXXX)",
       whatsapp: "Bot WhatsApp Number (Customer Support)",
       whatsappHint: "The WhatsApp number your AI assistant connects to for customer chat",
       phoneMustBeDifferent: "Bot WhatsApp number must be different from Manager number (dedicated customer support line)",

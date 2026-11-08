@@ -22,10 +22,10 @@ export default function TermsClient() {
         {
           h: "٢. الاشتراك والدفع",
           ps: [
-            "الاشتراك بيتكون من: رسوم تأسيس بتتدفع مرة واحدة عند بدء الخدمة + اشتراك شهري حسب الباقة المختارة. كل الأسعار بالجنيه المصري ومعلنة في صفحة الأسعار.",
-            "الدفع بيتم عبر التحويل (إنستاباي، فودافون كاش، وي باي) مع رفع إثبات التحويل. تفعيل الخدمة بيبدأ بعد تأكيد فريقنا لاستلام المبلغ.",
+            "الاشتراك بيتكون من: رسوم تأسيس بتتدفع مرة واحدة عند بدء الخدمة + اشتراك شهري حسب الباقة المختارة. كل الأسعار معلنة في صفحة الأسعار.",
+            "الدفع بيتم عبر التحويل المباشر أو وسائل الدفع المعتمدة مع رفع إثبات التحويل. تفعيل الخدمة بيبدأ بعد تأكيد فريقنا لاستلام المبلغ.",
             "الاشتراك الشهري بيتجدد بالدفع المسبق. التأخر في سداد الشهر الجديد قد يؤدي لإيقاف الخدمة مؤقتاً لحين السداد.",
-            "كل باقة ليها حد شهري لعدد الرسائل الذكية. عند تجاوز الحد، تقدر تترقى لباقة أعلى أو تستنى بداية الشهر التالي.",
+            "كل باقة ليها رصيد استهلاك مرن. عند استهلاك الرصيد، تقدر تترقى لباقة أعلى أو تجدد في أي وقت.",
           ],
         },
         {
@@ -86,10 +86,10 @@ export default function TermsClient() {
         {
           h: "2. Subscription & payment",
           ps: [
-            "The subscription consists of: a one-time setup fee paid at service start + a monthly subscription per the chosen plan. All prices are in Egyptian pounds and published on the pricing page.",
-            "Payment is made by transfer (InstaPay, Vodafone Cash, WE Pay) with uploaded proof. Service activation begins after our team confirms receipt of the amount.",
+            "The subscription consists of: a one-time setup fee paid at service start + a monthly subscription per the chosen plan. All prices are transparently published on the pricing page.",
+            "Payment is made by transfer or supported payment methods with uploaded proof. Service activation begins after our team confirms receipt of the amount.",
             "The monthly subscription renews on a prepaid basis. Late payment for a new month may result in temporary suspension until settled.",
-            "Each plan has a monthly limit of AI messages. If you exceed it, you can upgrade to a higher plan or wait for the next month's reset.",
+            "Each plan includes a flexible token-wallet balance. If you exhaust it, you can upgrade to a higher plan or renew anytime.",
           ],
         },
         {

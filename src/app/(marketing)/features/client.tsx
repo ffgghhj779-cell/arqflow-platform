@@ -91,13 +91,13 @@ function VoiceMock() {
       voice: "رسالة صوتية · ٠:١٢",
       transcript: "«هو في مقاس ٤٢ من الكوتشي الأبيض اللي نزلتوه؟»",
       reply: "أيوه متوفر مقاس ٤٢ 👟 سعره ١٫٨٥٠ ج.م والشحن مجاني فوق الـ ١٥٠٠. أثبتهولك؟",
-      label: "البوت فهم الصوتية بالمصري ورد نصياً",
+      label: "البوت يفهم الرسائل الصوتية واللهجات المحكية ويرد نصياً",
     },
     en: {
       voice: "Voice message · 0:12",
       transcript: "“Do you have size 42 of the white sneakers you just posted?”",
       reply: "Yes, size 42 is in stock 👟 It's 1,850 EGP with free shipping over 1,500. Shall I reserve it?",
-      label: "The bot understood the Egyptian voice note and replied in text",
+      label: "The bot understands voice notes & local dialects and replies in text",
     },
   });
   return (
@@ -134,7 +134,7 @@ function DeepDives() {
           icon: Zap,
           badge: "السرعة",
           h: "ردود فورية بتبيع بدل ما تأجّل",
-          p: "في مصر، العميل اللي مش بيلاقي رد بيكلم المنافس اللي بعدك في السيرش. وكيل ArqFlow بيرد في أقل من ٥ ثواني — بإجابة كاملة فيها السعر والتفاصيل، مش «حاضر هشوف وأرد عليك».",
+          p: "في أسواقنا السريعة (السعودية ومصر)، العميل اللي مش بيلاقي رد سريع بيكلم المنافس اللي بعدك. وكيل ArqFlow بيرد في أقل من ٥ ثواني — بإجابة كاملة فيها السعر والتفاصيل، مش «حاضر هشوف وأرد عليك».",
           points: ["رد كامل بالأسعار والتفاصيل من أول رسالة", "شغّال في الأعياد والإجازات ونص الليل", "بيفتكر العميل القديم وتفضيلاته"],
         },
         {
@@ -147,9 +147,9 @@ function DeepDives() {
         {
           icon: Mic,
           badge: "اللغة",
-          h: "بيفهم الفويسات والمصري — زي أي موظف شاطر",
-          p: "العميل المصري بيبعت صوتية أسهل ما يكتب. وكيل ArqFlow بيسمع الرسالة الصوتية، يفهم اللهجة المصرية بمصطلحاتها، ويرد رد مظبوط — بالعربي أو بالإنجليزي حسب لغة العميل.",
-          points: ["تحويل الصوت لنص وفهم المقصود مش بس الكلام", "مدرّب على اللهجة المصرية والمصطلحات الدارجة", "بيبدّل بين العربي والإنجليزي تلقائياً"],
+          h: "بيفهم الفويسات واللهجات المحلية — زي أي موظف شاطر",
+          p: "عملاء الواتساب في السعودية ومصر بيبعتوا صوتيات باستمرار. وكيل ArqFlow بيسمع الرسالة الصوتية، يفهم اللهجة المحلية ومصطلحاتها، ويرد رد مظبوط — بالعربي أو بالإنجليزي حسب لغة العميل.",
+          points: ["تحويل الصوت لنص وفهم المقصود مش بس الكلام", "مدرّب على اللهجات السعودية، المصرية والخليجية", "بيبدّل بين العربي والإنجليزي تلقائياً"],
         },
       ],
     },
@@ -159,7 +159,7 @@ function DeepDives() {
           icon: Zap,
           badge: "Speed",
           h: "Instant replies that sell instead of stall",
-          p: "In Egypt, a customer who gets no reply messages your competitor next. An ArqFlow agent replies in under 5 seconds — with a complete answer including prices and details, not “let me check and get back to you”.",
+          p: "In fast-paced markets like Saudi Arabia & Egypt, a customer who gets no reply messages your competitor next. An ArqFlow agent replies in under 5 seconds — with a complete answer including prices and details, not “let me check and get back to you”.",
           points: ["Full answers with prices and details from the first message", "Working on holidays, weekends, and at 3 AM", "Remembers returning customers and their preferences"],
         },
         {
@@ -172,9 +172,9 @@ function DeepDives() {
         {
           icon: Mic,
           badge: "Language",
-          h: "Understands voice notes and Masry — like your best employee",
-          p: "Egyptian customers send voice notes more than text. An ArqFlow agent listens to the voice message, understands the Egyptian dialect with all its slang, and replies precisely — in Arabic or English, matching the customer.",
-          points: ["Transcribes voice and understands intent, not just words", "Trained on Egyptian dialect and everyday slang", "Switches between Arabic and English automatically"],
+          h: "Understands voice notes and local dialects — like your best employee",
+          p: "Customers across Saudi Arabia and Egypt send voice notes constantly. An ArqFlow agent listens to the audio, understands Saudi, Gulf and Egyptian slang, and replies precisely — in Arabic or English, matching the customer.",
+          points: ["Transcribes voice and understands intent, not just words", "Trained on Saudi, Gulf, and Egyptian dialects", "Switches between Arabic and English automatically"],
         },
       ],
     },
@@ -225,7 +225,7 @@ function Comparison() {
       rows: [
         { f: "التكلفة الشهرية", v: ["من ٥٠٠ ج.م", "٦٠٠٠+ ج.م", "متفاوتة"] },
         { f: "الرد ٢٤ ساعة بدون إجازات", v: ["yes", "no", "yes"] },
-        { f: "فهم اللهجة المصرية والفويسات", v: ["yes", "yes", "no"] },
+        { f: "فهم اللهجات المحلية والفويسات", v: ["yes", "yes", "no"] },
         { f: "ياخد طلبات وحجوزات كاملة", v: ["yes", "yes", "no"] },
         { f: "سرعة الرد", v: ["ثواني", "دقايق لساعات", "فوري لكن غبي"] },
         { f: "يتعامل مع ١٠٠ عميل في نفس اللحظة", v: ["yes", "no", "partial"] },
@@ -241,7 +241,7 @@ function Comparison() {
       rows: [
         { f: "Monthly cost", v: ["From 500 EGP", "6,000+ EGP", "Varies"] },
         { f: "Answers 24/7, no days off", v: ["yes", "no", "yes"] },
-        { f: "Understands Egyptian dialect & voice notes", v: ["yes", "yes", "no"] },
+        { f: "Understands local dialects & voice notes", v: ["yes", "yes", "no"] },
         { f: "Takes complete orders & bookings", v: ["yes", "yes", "no"] },
         { f: "Reply speed", v: ["Seconds", "Minutes to hours", "Instant but dumb"] },
         { f: "Handles 100 customers at once", v: ["yes", "no", "partial"] },

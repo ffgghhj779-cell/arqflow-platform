@@ -36,7 +36,7 @@ function Hero() {
 
   const t = useT({
     ar: {
-      badge: "✦ أكثر من ١٠٠ نشاط تجاري مصري يثق في ArqFlow",
+      badge: "✦ أكثر من ١٠٠ نشاط تجاري في السعودية ومصر يثق في ArqFlow",
       h1a: "موظف ذكاء اصطناعي",
       h1b: "يرد على عملاءك ٢٤ ساعة",
       sub: "حلول ذكية متكاملة للرد الفوري، استقبال الطلبات، وحجز المواعيد على الواتساب — بدون توقف، بدون إجازات.",
@@ -47,7 +47,7 @@ function Hero() {
       liveTag: "مباشر الآن",
     },
     en: {
-      badge: "✦ 100+ Egyptian Businesses Trust ArqFlow",
+      badge: "✦ 100+ Businesses Across Saudi Arabia & Egypt Trust ArqFlow",
       h1a: "Integrated AI Employee",
       h1b: "Answering Your Customers 24/7",
       sub: "Integrated smart solutions for instant replies, order taking, and appointment booking on WhatsApp — no downtime, no days off.",
@@ -332,10 +332,10 @@ function Features() {
       items: [
         { icon: Zap,          h: "ردود فورية ٢٤ ساعة",         p: "عميلك يسأل الساعة ٣ الفجر؟ يلاقي رد كامل ومحترم في ثواني — مش رسالة آلية مقفولة." },
         { icon: ShoppingCart, h: "استقبال الطلبات والحجوزات",  p: "البوت ياخد الأوردر بالتفاصيل، يأكّد السعر والعنوان، ويسجّل كل حاجة في لوحة التحكم بتاعتك." },
-        { icon: Mic,          h: "فهم الرسائل الصوتية",        p: "عملاءك بيحبوا الفويس؟ مفيش مشكلة. البوت بيسمع، بيفهم المصري، وبيرد كأنه سمعك بودنه." },
+        { icon: Mic,          h: "فهم الرسائل الصوتية واللهجات", p: "عملاءك بيحبوا الفويس؟ مفيش مشكلة. البوت بيسمع، بيفهم اللهجة المحكية، وبيرد كأنه سمعك بودنه." },
         { icon: Users,        h: "تحويل ذكي لموظف بشري",      p: "لو السؤال محتاج بني آدم، البوت بيحوّل المحادثة لفريقك في ثانية مع ملخص كامل للموقف." },
         { icon: BarChart3,    h: "تحليلات وتقارير",           p: "اعرف أكتر الأسئلة تكراراً، أوقات الذروة، وعدد الطلبات — أرقام حقيقية تبني عليها قرارات." },
-        { icon: Languages,    h: "عربي + إنجليزي + مصري",    p: "بيرد بنفس لغة العميل تلقائياً، ومتدرّب على اللهجة المصرية مش بس الفصحى." },
+        { icon: Languages,    h: "عربي + إنجليزي + لهجات محلية", p: "بيرد بنفس لغة العميل تلقائياً، ومتدرّب على اللهجات السعودية والمصرية والخليجية مش بس الفصحى." },
       ],
     },
     en: {
@@ -345,10 +345,10 @@ function Features() {
       items: [
         { icon: Zap,          h: "Instant replies, 24/7",        p: "A customer asks at 3 AM? They get a complete, polite answer in seconds — not a canned auto-reply." },
         { icon: ShoppingCart, h: "Orders & bookings",            p: "The bot takes the full order, confirms price and address, and logs everything in your dashboard." },
-        { icon: Mic,          h: "Voice message understanding",  p: "Your customers love voice notes? No problem. The bot listens, understands Egyptian Arabic, and replies naturally." },
+        { icon: Mic,          h: "Voice message understanding",  p: "Your customers love voice notes? No problem. The bot listens, understands native Arabic dialects, and replies naturally." },
         { icon: Users,        h: "Smart human escalation",       p: "When a question needs a human, the bot hands the chat to your team instantly — with a full summary." },
         { icon: BarChart3,    h: "Analytics & reports",          p: "Know your most-asked questions, peak hours, and order counts — real numbers for real decisions." },
-        { icon: Languages,    h: "Arabic + English + Masry",     p: "Automatically replies in the customer's language, trained on the Egyptian dialect — not just formal Arabic." },
+        { icon: Languages,    h: "Arabic + English + Dialects",  p: "Automatically replies in the customer's language, trained on Saudi, Egyptian & Gulf dialects — not just formal Arabic." },
       ],
     },
   });
@@ -412,9 +412,9 @@ function HowItWorks() {
       title: "من الاشتراك للتشغيل في ٤ خطوات",
       sub: "مفيش اجتماعات ولا أسابيع انتظار. النظام مبني عشان يشتغل بسرعة.",
       steps: [
-        { h: "اختار باقتك", p: "ستارتر، بيزنس، أو إنتربرايز — كل باقة واضحة بالجنيه المصري.", icon: TrendingUp },
+        { h: "اختار باقتك", p: "ستارتر، بيزنس، أو إنتربرايز — باقات واضحة ومدروسة تناسب حجم نشاطك.", icon: TrendingUp },
         { h: "املا بيانات نشاطك", p: "اسم النشاط، المنيو أو الخدمات، أسئلة عملاءك المعتادة — في فورم واحد بسيط.", icon: CheckCircle2 },
-        { h: "ادفع بالطريقة اللي تريحك", p: "إنستاباي، فودافون كاش، أو وي باي — وارفع إثبات الدفع.", icon: ShoppingCart },
+        { h: "ادفع بالطريقة اللي تريحك", p: "تحويل بنكي مباشر، بطاقات دفع، أو تحويلات سريعة — وارفع إثبات التحويل بسهولة.", icon: ShoppingCart },
         { h: "البوت يشتغل في دقايق", p: "بنجهّز وكيلك الخاص ونوصّله بواتساب نشاطك — وعملاءك يبدأوا ياخدوا ردود فوراً.", icon: Zap },
       ],
       more: "اعرف التفاصيل الكاملة",
@@ -424,9 +424,9 @@ function HowItWorks() {
       title: "From subscription to live bot in 4 steps",
       sub: "No meetings, no weeks of waiting. The system is built for speed.",
       steps: [
-        { h: "Choose your plan", p: "Starter, Business, or Enterprise — every plan clearly priced in EGP.", icon: TrendingUp },
+        { h: "Choose your plan", p: "Starter, Business, or Enterprise — clear plans tailored to your business scale.", icon: TrendingUp },
         { h: "Fill the onboarding form", p: "Your business name, menu or services, and your customers' usual questions — one simple form.", icon: CheckCircle2 },
-        { h: "Pay your way", p: "InstaPay, Vodafone Cash, or WE Pay — then upload your payment proof.", icon: ShoppingCart },
+        { h: "Pay your way", p: "Direct bank transfer, card payments, or mobile payment apps — then upload your receipt.", icon: ShoppingCart },
         { h: "Your bot goes live in minutes", p: "We provision your private agent and connect it to your WhatsApp — customers start getting instant answers.", icon: Zap },
       ],
       more: "See the full details",
@@ -504,7 +504,7 @@ function Industries() {
   const t = useT({
     ar: {
       badge: "المجالات",
-      title: "مبني لكل بيزنس مصري بيرد على واتساب",
+      title: "مبني لكل بيزنس ونشاط تجاري بيرد على واتساب",
       items: [
         { icon: UtensilsCrossed, l: "مطاعم وكافيهات" },
         { icon: Stethoscope,     l: "عيادات ومراكز طبية" },
@@ -519,7 +519,7 @@ function Industries() {
     },
     en: {
       badge: "Industries",
-      title: "Built for every Egyptian business that lives on WhatsApp",
+      title: "Built for every business that lives on WhatsApp",
       items: [
         { icon: UtensilsCrossed, l: "Restaurants & cafés" },
         { icon: Stethoscope,     l: "Clinics & medical centers" },
@@ -569,14 +569,14 @@ function PricingPreview({ plans = PLANS }: { plans?: Plan[] }) {
   const t = useT({
     ar: {
       badge: "الأسعار",
-      title: "أسعار واضحة بالجنيه المصري",
-      sub: "رسوم تأسيس لمرة واحدة + اشتراك شهري. من غير مفاجآت ومن غير عقود طويلة.",
+      title: "باقات واضحة وشفافة بدون مفاجآت",
+      sub: "رسوم تأسيس لمرة واحدة + اشتراك شهري مرن. من غير مفاجآت ومن غير عقود معقدة.",
       full: "شوف تفاصيل الباقات كاملة",
     },
     en: {
       badge: "Pricing",
-      title: "Clear pricing, in Egyptian pounds",
-      sub: "A one-time setup fee + a monthly subscription. No surprises, no long contracts.",
+      title: "Clear, transparent pricing with zero surprises",
+      sub: "A one-time setup fee + flexible monthly subscription. No surprises, no long commitments.",
       full: "See full plan details",
     },
   });

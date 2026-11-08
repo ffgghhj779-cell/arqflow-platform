@@ -15,7 +15,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "الأسعار · Pricing",
   description:
-    "باقات ArqFlow بالجنيه المصري: ستارتر، بيزنس، إنتربرايز. رسوم تأسيس لمرة واحدة + اشتراك شهري. الدفع بالتحويل البنكي والفيزا وإنستاباي وفودافون كاش.",
+    "باقات ArqFlow الذكية: ستارتر، بيزنس، إنتربرايز. رسوم تأسيس لمرة واحدة + اشتراك شهري. دفع مرن عبر التحويل البنكي والبطاقات والدفع الفوري.",
 };
 
 export default async function PricingPage() {

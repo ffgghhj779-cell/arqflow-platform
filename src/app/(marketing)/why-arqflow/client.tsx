@@ -16,7 +16,7 @@ export default function WhyArqflowClient() {
     ar: {
       badge: "ليه ArqFlow",
       title: "في بوتات كتير. في ArqFlow واحد.",
-      sub: "اتبنى من الأول للسوق المصري: لهجته، طرق دفعه، وطريقة عملائه في الكلام على واتساب.",
+      sub: "اتبنى من الأول للشركات في السعودية ومصر: يفهم اللهجات المحلية، طرق الدفع السريعة، وطريقة تواصل العملاء على واتساب.",
       items: [
         {
           icon: Gauge,
@@ -25,8 +25,8 @@ export default function WhyArqflowClient() {
         },
         {
           icon: MessagesSquare,
-          h: "إتقان اللهجة المصرية",
-          p: "مش ترجمة آلية ولا فصحى متكلفة. الوكيل بيفهم «عايز» و«بكام» و«هاتلي» والفويسات الطويلة، وبيرد بطريقة طبيعية تحس إنها من البلد.",
+          h: "إتقان اللهجات المحلية (السعودية والمصرية)",
+          p: "مش ترجمة آلية ولا فصحى متكلفة. الوكيل بيفهم اللهجة السعودية والخليجية والمصرية بكل مصطلحاتها الدارجة والفويسات الصوتية، وبيرد بطريقة لبقة وطبيعية تناسب عميلك.",
         },
         {
           icon: Workflow,
@@ -40,8 +40,8 @@ export default function WhyArqflowClient() {
         },
         {
           icon: BadgeDollarSign,
-          h: "أسعار شفافة بالجنيه",
-          p: "كل الأرقام معلنة بالجنيه المصري: رسوم تأسيس واضحة واشتراك شهري ثابت. مفيش دولار متغير، مفيش رسوم مخفية، مفيش «اتصل بنا».",
+          h: "تسعير عادل وشفاف",
+          p: "رسوم تأسيس واضحة واشتراك شهري ومحفظة استهلاك شفافة. مفيش رسوم مخفية، ولا مفاجآت، ولا باقات تنتهي بدون استخدام.",
         },
         {
           icon: Users,
@@ -53,7 +53,7 @@ export default function WhyArqflowClient() {
     en: {
       badge: "Why ArqFlow",
       title: "There are many bots. There is one ArqFlow.",
-      sub: "Built from day one for the Egyptian market: its dialect, its payment methods, and the way its customers actually talk on WhatsApp.",
+      sub: "Built from day one for businesses across Saudi Arabia & Egypt: local dialects, flexible workflows, and real customer conversations on WhatsApp.",
       items: [
         {
           icon: Gauge,
@@ -62,8 +62,8 @@ export default function WhyArqflowClient() {
         },
         {
           icon: MessagesSquare,
-          h: "Egyptian dialect mastery",
-          p: "Not machine translation, not stiff formal Arabic. The agent understands “3ayez”, “bekam”, “hatly”, and long voice notes — and replies so naturally it feels local.",
+          h: "Native dialect mastery (Saudi & Egyptian)",
+          p: "Not stiff translation or rigid scripts. The agent understands Saudi, Gulf, and Egyptian slang and voice notes — replying naturally, politely, and effectively.",
         },
         {
           icon: Workflow,
@@ -77,8 +77,8 @@ export default function WhyArqflowClient() {
         },
         {
           icon: BadgeDollarSign,
-          h: "Transparent pricing in EGP",
-          p: "Every number is public, in Egyptian pounds: a clear setup fee and a fixed monthly subscription. No fluctuating dollars, no hidden fees, no “contact sales”.",
+          h: "Fair, transparent pricing",
+          p: "Clear setup fees, fixed subscriptions, and flexible token-wallet usage. No hidden fees, no currency markups, no wasted unused quotas.",
         },
         {
           icon: Users,

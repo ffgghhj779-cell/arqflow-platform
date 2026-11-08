@@ -33,7 +33,7 @@ export function IndustryMarquee() {
       <div className="max-w-7xl mx-auto px-4 mb-3 text-center">
         <p className="text-[11px] font-bold uppercase tracking-widest text-muted flex items-center justify-center gap-1.5">
           <Sparkles className="w-3 h-3 text-accent" />
-          {lang === "ar" ? "موثوق به في أكثر من ٩ مجالات تجارية في مصر" : "TRUSTED ACROSS 9+ INDUSTRIES IN EGYPT"}
+          {lang === "ar" ? "موثوق به في أكثر من ٩ مجالات تجارية في السعودية ومصر" : "TRUSTED ACROSS 9+ INDUSTRIES IN SAUDI ARABIA & EGYPT"}
         </p>
       </div>
 

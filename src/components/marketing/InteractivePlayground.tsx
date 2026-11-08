@@ -18,12 +18,13 @@ const PRESET_PROMPTS = {
     { label: "سعر باقة الشركات؟", reply: "أهلاً بك! باقة الشركات (Business) قيمتها 2,900 ج.م شهرياً مع ميزانية توكنز سخية تغطي أكثر من 2,500 محادثة متقدمة وتدريب كامل على ملفات نشاطك 🚀" },
     { label: "عايز احجز موعد استشارة", reply: "بالتأكيد! متاح اليوم الساعة 4:00 عصراً أو غداً 11:00 صباحاً. ما الوقت الأنسب لك لتأكيد الحجز فوراً؟ 📅" },
     { label: "ازاي بتربطوا مع واتساب؟", reply: "الربط بيتم في دقيقة واحدة بمجرد مسح كود الـ QR من داخل لوحة التحكم، بدون أي برمجة أو تعقيد تقني! 📲" },
-    { label: "هل بتفهموا اللهجة المصرية؟", reply: "طبعاً! البوت مدرب على فهم كل اللهجات العربية والمصرية المحكية والعامية بالإضافة للفصحى والإنجليزية بدقة تامة 🇪🇬" },
+    { label: "هل تفهمون اللهجات السعودية والمصرية؟", reply: "طبعاً! البوت مدرّب على فهم اللهجة السعودية والخليجية والمصرية بالإضافة إلى الفصحى والإنجليزية بدقة تامة 🇸🇦 🇪🇬" },
   ],
   en: [
     { label: "How much is Business Plan?", reply: "Hello! The Business Plan is 2,900 EGP/mo. It includes a dedicated token budget covering 2,500+ deep customer conversations, CRM sync & full knowledge base training 🚀" },
     { label: "Book a consultation demo", reply: "Sure thing! We have slots open today at 4:00 PM or tomorrow at 11:00 AM. Which one works best for you? 📅" },
     { label: "How does WhatsApp linking work?", reply: "It takes under 60 seconds! Just scan a QR code from your ArqFlow dashboard — no code or API hassle required 📲" },
+    { label: "Do you support Saudi & Egyptian dialects?", reply: "Absolutely! The AI is natively trained to comprehend Saudi, Gulf, and Egyptian dialects along with Modern Standard Arabic and English with unmatched precision 🇸🇦 🇪🇬" },
   ],
 };
 

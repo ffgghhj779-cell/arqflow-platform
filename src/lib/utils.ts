@@ -95,12 +95,17 @@ export function cn(...classes: (string | false | null | undefined)[]): string {
   return classes.filter(Boolean).join(" ");
 }
 
-/** Strict E.164-ish Egyptian phone normalizer: returns 20XXXXXXXXXX or null */
+/** Phone normalizer supporting Egypt (+20), Saudi Arabia (+966), and international numbers */
 export function normalizeEgyptPhone(input: string): string | null {
   const digits = input.replace(/[^\d]/g, "");
+  // Egyptian mobile: 01XXXXXXXXX -> 201XXXXXXXXX
   if (/^01[0125]\d{8}$/.test(digits)) return `2${digits}`;
   if (/^201[0125]\d{8}$/.test(digits)) return digits;
-  if (/^\d{10,15}$/.test(digits)) return digits; // non-Egyptian international
+  // Saudi mobile: 05XXXXXXXX -> 9665XXXXXXXX
+  if (/^05\d{8}$/.test(digits)) return `966${digits.slice(1)}`;
+  if (/^9665\d{8}$/.test(digits)) return digits;
+  // General international: 8-15 digits
+  if (/^\d{8,15}$/.test(digits)) return digits;
   return null;
 }
 
