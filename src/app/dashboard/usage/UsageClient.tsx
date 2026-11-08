@@ -213,7 +213,7 @@ export default function UsageClient({ businessId, current: initialCurrent, histo
                 <stop offset="100%" stopColor="var(--accent)" stopOpacity={0} />
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(14,32,56,0.06)" vertical={false} />
+            <CartesianGrid strokeDasharray="3 3" stroke="rgba(13,34,54,0.06)" vertical={false} />
             <XAxis dataKey="date" tick={{ fill: "var(--fg-muted)", fontSize: 11 }} axisLine={false} tickLine={false} interval={4} />
             <YAxis tick={{ fill: "var(--fg-muted)", fontSize: 11 }} axisLine={false} tickLine={false} allowDecimals={false} />
             <Tooltip contentStyle={{ background: "var(--bg-solid)", border: "1px solid var(--border)", borderRadius: "0.75rem", color: "var(--fg)" }} />
@@ -230,10 +230,10 @@ export default function UsageClient({ businessId, current: initialCurrent, histo
         ) : (
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={monthlyData} margin={{ left: -20, right: 8 }} barSize={28}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(14,32,56,0.06)" vertical={false} />
+              <CartesianGrid strokeDasharray="3 3" stroke="rgba(13,34,54,0.06)" vertical={false} />
               <XAxis dataKey="label" tick={{ fill: "var(--fg-muted)", fontSize: 11 }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fill: "var(--fg-muted)", fontSize: 11 }} axisLine={false} tickLine={false} allowDecimals={false} />
-              <Tooltip contentStyle={{ background: "var(--bg-solid)", border: "1px solid var(--border)", borderRadius: "0.75rem", color: "var(--fg)" }} cursor={{ fill: "rgba(14,32,56,0.05)" }} />
+              <Tooltip contentStyle={{ background: "var(--bg-solid)", border: "1px solid var(--border)", borderRadius: "0.75rem", color: "var(--fg)" }} cursor={{ fill: "rgba(13,34,54,0.05)" }} />
               <Bar dataKey="used" radius={[6, 6, 0, 0]} name={t.consumed}>
                 {monthlyData.map((d, i) => (
                   <Cell key={i} fill={d.total && d.used / d.total >= 0.9 ? "var(--danger)" : d.total && d.used / d.total >= 0.75 ? "var(--warning)" : "var(--accent)"} />

@@ -185,7 +185,7 @@ export default function SettingsClient({ settingsMap, admins: initialAdmins }: P
   return (
     <div className="space-y-6 max-w-4xl">
       {/* Quick link to Pricing & Plans management */}
-      <div className="card p-5 bg-gradient-to-r from-accent/10 via-[rgba(14,32,56,0.04)] to-transparent border-accent/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="card p-5 bg-gradient-to-r from-accent/10 via-[rgba(13,34,54,0.04)] to-transparent border-accent/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h3 className="font-bold text-base flex items-center gap-2">
             <DollarSign className="w-5 h-5 text-accent" />
@@ -219,7 +219,7 @@ export default function SettingsClient({ settingsMap, admins: initialAdmins }: P
         </div>
 
         {/* Currency Quick Selection Pills */}
-        <div className="p-4 rounded-xl bg-[rgba(14,32,56,0.03)] border border-app space-y-3">
+        <div className="p-4 rounded-xl bg-[rgba(13,34,54,0.03)] border border-app space-y-3">
           <div className="flex items-center justify-between flex-wrap gap-2">
             <span className="text-xs font-semibold text-muted">اختيار سريع للعملة (اضغط لتفعيلها فوراً):</span>
             <span className="text-xs text-muted font-mono">
@@ -349,7 +349,7 @@ export default function SettingsClient({ settingsMap, admins: initialAdmins }: P
         </div>
 
         {/* 1. Bank Account Transfer (حساب بنكي) */}
-        <div className="p-4 rounded-xl border border-app bg-[rgba(14,32,56,0.02)] space-y-4">
+        <div className="p-4 rounded-xl border border-app bg-[rgba(13,34,54,0.02)] space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <span className="p-2 rounded-lg bg-accent/10 text-accent">
@@ -455,7 +455,7 @@ export default function SettingsClient({ settingsMap, admins: initialAdmins }: P
         </div>
 
         {/* 2. Credit Card / Visa (فيزا / ماستركارد) */}
-        <div className="p-4 rounded-xl border border-app bg-[rgba(14,32,56,0.02)] space-y-4">
+        <div className="p-4 rounded-xl border border-app bg-[rgba(13,34,54,0.02)] space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <span className="p-2 rounded-lg bg-accent/10 text-accent">
@@ -516,7 +516,7 @@ export default function SettingsClient({ settingsMap, admins: initialAdmins }: P
         </div>
 
         {/* 3. InstaPay (إنستاباي) */}
-        <div className="p-4 rounded-xl border border-app bg-[rgba(14,32,56,0.02)] space-y-4">
+        <div className="p-4 rounded-xl border border-app bg-[rgba(13,34,54,0.02)] space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <span className="p-2 rounded-lg bg-accent/10 text-accent">
@@ -577,7 +577,7 @@ export default function SettingsClient({ settingsMap, admins: initialAdmins }: P
         </div>
 
         {/* 4. Mobile Wallets (فودافون كاش و وي باي) */}
-        <div className="p-4 rounded-xl border border-app bg-[rgba(14,32,56,0.02)] space-y-4">
+        <div className="p-4 rounded-xl border border-app bg-[rgba(13,34,54,0.02)] space-y-4">
           <div className="flex items-center gap-2.5">
             <span className="p-2 rounded-lg bg-accent/10 text-accent">
               <Wallet className="w-5 h-5" />
@@ -796,7 +796,7 @@ export default function SettingsClient({ settingsMap, admins: initialAdmins }: P
               }}
               className="sr-only peer"
             />
-            <div className="w-11 h-6 bg-[rgba(14,32,56,0.1)] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-danger" />
+            <div className="w-11 h-6 bg-[rgba(13,34,54,0.1)] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-danger" />
           </label>
         </div>
       </div>

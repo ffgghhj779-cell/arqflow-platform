@@ -598,7 +598,7 @@ export default function WhatsAppClient({ businessId, initialInstance }: Props) {
             </div>
 
             {/* Details Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm bg-[rgba(14,32,56,0.03)] dark:bg-[rgba(255,255,255,0.02)] p-4 rounded-xl mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm bg-[rgba(13,34,54,0.03)] dark:bg-[rgba(255,255,255,0.02)] p-4 rounded-xl mb-6">
               <div>
                 <p className="text-muted text-xs mb-1">{t.number}</p>
                 <p className="font-semibold text-base font-mono truncate">
@@ -751,7 +751,7 @@ export default function WhatsAppClient({ businessId, initialInstance }: Props) {
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-3">
-                      <div className="w-10 h-10 rounded-xl bg-[rgba(14,32,56,0.08)] dark:bg-[rgba(255,255,255,0.08)] text-app flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-xl bg-[rgba(13,34,54,0.08)] dark:bg-[rgba(255,255,255,0.08)] text-app flex items-center justify-center">
                         <QrCode className="w-5 h-5" />
                       </div>
                       <Badge variant="neutral" className="text-[10px] py-0.5 px-2">
@@ -828,7 +828,7 @@ export default function WhatsAppClient({ businessId, initialInstance }: Props) {
                 </div>
 
                 {/* Evolution Privacy note */}
-                <div className="p-3 rounded-xl bg-[rgba(14,32,56,0.04)] dark:bg-[rgba(255,255,255,0.03)] border border-glass">
+                <div className="p-3 rounded-xl bg-[rgba(13,34,54,0.04)] dark:bg-[rgba(255,255,255,0.03)] border border-glass">
                   <div className="flex items-center gap-2 font-semibold text-app mb-1">
                     <QrCode className="w-3.5 h-3.5" />
                     <span>بروتوكول Evolution API:</span>
@@ -864,7 +864,7 @@ export default function WhatsAppClient({ businessId, initialInstance }: Props) {
           <p className="text-xs text-muted">{t.metaModalSub}</p>
 
           {/* Mode Switch Tabs */}
-          <div className="flex items-center gap-2 p-1 bg-[rgba(14,32,56,0.06)] dark:bg-[rgba(255,255,255,0.04)] rounded-xl text-xs">
+          <div className="flex items-center gap-2 p-1 bg-[rgba(13,34,54,0.06)] dark:bg-[rgba(255,255,255,0.04)] rounded-xl text-xs">
             <button
               onClick={() => setMetaTab("embedded")}
               className={cn(
@@ -899,7 +899,7 @@ export default function WhatsAppClient({ businessId, initialInstance }: Props) {
           {/* Embedded Flow Tab */}
           {metaTab === "embedded" && (
             <div className="space-y-4">
-              <div className="space-y-2.5 bg-[rgba(14,32,56,0.03)] dark:bg-[rgba(255,255,255,0.02)] p-4 rounded-xl text-xs">
+              <div className="space-y-2.5 bg-[rgba(13,34,54,0.03)] dark:bg-[rgba(255,255,255,0.02)] p-4 rounded-xl text-xs">
                 {[t.metaStep1, t.metaStep2, t.metaStep3, t.metaStep4].map((step, i) => (
                   <div key={i} className="flex items-center gap-2.5">
                     <span className="w-5 h-5 rounded-full bg-[rgba(184,144,99,0.2)] text-accent flex items-center justify-center font-bold text-[10px] shrink-0">
@@ -1102,7 +1102,7 @@ export default function WhatsAppClient({ businessId, initialInstance }: Props) {
 
           {/* Optional Pairing Code */}
           {pairingCode && (
-            <div className="bg-[rgba(14,32,56,0.05)] dark:bg-[rgba(255,255,255,0.03)] p-3 rounded-xl max-w-xs mx-auto text-center">
+            <div className="bg-[rgba(13,34,54,0.05)] dark:bg-[rgba(255,255,255,0.03)] p-3 rounded-xl max-w-xs mx-auto text-center">
               <p className="text-xs text-muted mb-1.5">{t.pairingCodeLabel}</p>
               <div className="flex items-center justify-center gap-2">
                 <code className="text-sm font-mono font-bold tracking-widest text-accent">
@@ -1123,7 +1123,7 @@ export default function WhatsAppClient({ businessId, initialInstance }: Props) {
           )}
 
           {/* Instructions List */}
-          <div className="space-y-2 text-start bg-[rgba(14,32,56,0.03)] dark:bg-[rgba(255,255,255,0.02)] p-4 rounded-xl text-xs">
+          <div className="space-y-2 text-start bg-[rgba(13,34,54,0.03)] dark:bg-[rgba(255,255,255,0.02)] p-4 rounded-xl text-xs">
             {[t.step1, t.step2, t.step3, t.step4].map((step, i) => (
               <div key={i} className="flex items-center gap-2.5">
                 <span className="w-5 h-5 rounded-full bg-[rgba(184,144,99,0.2)] text-accent flex items-center justify-center font-bold text-[10px] shrink-0">
@@ -1160,7 +1160,7 @@ export default function WhatsAppClient({ businessId, initialInstance }: Props) {
             <h3 className="font-bold text-base text-app">{t.changeModalWarning}</h3>
             <p className="text-xs text-muted leading-relaxed">{t.changeModalText}</p>
             {(instance.display_phone_number || instance.connected_number) && (
-              <p className="text-xs font-mono font-semibold bg-[rgba(14,32,56,0.04)] py-1 px-3 rounded-lg inline-block">
+              <p className="text-xs font-mono font-semibold bg-[rgba(13,34,54,0.04)] py-1 px-3 rounded-lg inline-block">
                 {t.currentNumber} {instance.display_phone_number || instance.connected_number}
               </p>
             )}

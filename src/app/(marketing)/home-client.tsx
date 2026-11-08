@@ -170,16 +170,16 @@ function Hero() {
         style={{ y: mockupY }}
       >
         <TiltCard intensity={4} className="w-full">
-          <div className="rounded-2xl sm:rounded-3xl border border-slate-700/60 dark:border-white/15 bg-[#070e17] text-white shadow-[0_25px_70px_-15px_rgba(14,32,56,0.35)] dark:shadow-[0_25px_70px_-15px_rgba(0,0,0,0.85)] overflow-hidden">
+          <div className="rounded-2xl sm:rounded-3xl border border-white/20 dark:border-white/15 bg-[#2a6b73] text-white shadow-[0_25px_70px_-15px_rgba(13,34,54,0.35)] dark:shadow-[0_25px_70px_-15px_rgba(0,0,0,0.85)] overflow-hidden">
             {/* Mockup top bar */}
-            <div className="bg-[#0b1523] px-4 py-3 flex items-center gap-2 border-b border-white/10">
+            <div className="bg-[#245f67] px-4 py-3 flex items-center gap-2 border-b border-white/10">
               <div className="flex gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#ff5f57] shadow-sm" />
                 <div className="w-3 h-3 rounded-full bg-[#febc2e] shadow-sm" />
                 <div className="w-3 h-3 rounded-full bg-[#28c840] shadow-sm" />
               </div>
               <div className="flex-1 flex justify-center">
-                <div className="bg-[#132238] border border-white/10 rounded-full px-4 py-1 text-xs text-slate-200 font-mono font-medium max-w-xs w-full text-center truncate">
+                <div className="bg-[#34777f] border border-white/10 rounded-full px-4 py-1 text-xs text-white/90 font-mono font-medium max-w-xs w-full text-center truncate">
                   dashboard.arqflow.app
                 </div>
               </div>
@@ -190,7 +190,7 @@ function Hero() {
             </div>
 
             {/* Mockup body */}
-            <div className="bg-[#08101a] p-3 sm:p-5 flex gap-3 sm:gap-5 min-h-[240px] sm:min-h-[300px]">
+            <div className="bg-[#2a6b73] p-3 sm:p-5 flex gap-3 sm:gap-5 min-h-[240px] sm:min-h-[300px]">
               {/* Sidebar mini */}
               <div className="hidden sm:flex flex-col gap-1 w-36 shrink-0 border-e border-white/10 pe-3">
                 {["نظرة عامة", "المحادثات", "الطلبات", "العملاء", "التحليلات"].map((item, i) => (
@@ -200,7 +200,7 @@ function Hero() {
                       "text-xs px-3 py-2 rounded-lg font-semibold transition-all",
                       i === 1
                         ? "bg-teal-500/20 text-teal-300 border border-teal-500/30"
-                        : "text-slate-400 hover:text-white"
+                        : "text-white/75 hover:text-white"
                     )}
                   >
                     {item}
@@ -216,7 +216,7 @@ function Hero() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-white">عميل جديد</p>
-                    <p className="text-[10px] text-slate-400">منذ ثانيتين</p>
+                    <p className="text-[10px] text-white/75">منذ ثانيتين</p>
                   </div>
                   <div className="ms-auto flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -242,7 +242,7 @@ function Hero() {
                         className={cn(
                           "max-w-[85%] sm:max-w-[75%] text-xs sm:text-sm px-3.5 py-2.5 rounded-2xl leading-relaxed shadow-sm",
                           bubble.from === "customer"
-                            ? "bg-[#152438] text-slate-100 border border-white/10 rounded-ss-none font-medium"
+                            ? "bg-[#3a8089] text-slate-100 border border-white/10 rounded-ss-none font-medium"
                             : "bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-se-none font-medium shadow-teal-500/20 shadow-md"
                         )}
                       >
@@ -260,10 +260,10 @@ function Hero() {
                   { label: "طلبات مؤكدة", value: "١٢", color: "text-emerald-400", icon: CheckCircle2 },
                   { label: "متوسط الرد", value: "٣ث", color: "text-amber-400", icon: Clock },
                 ].map((stat) => (
-                  <div key={stat.label} className="bg-[#0e1b2c] border border-white/10 rounded-xl p-3 shadow-sm">
+                  <div key={stat.label} className="bg-[#34777f] border border-white/10 rounded-xl p-3 shadow-sm">
                     <stat.icon className={cn("w-4 h-4 mb-1", stat.color)} aria-hidden />
                     <p className={cn("text-base font-extrabold font-display", stat.color)}>{stat.value}</p>
-                    <p className="text-[10px] text-slate-300 mt-0.5 leading-tight">{stat.label}</p>
+                    <p className="text-[10px] text-white/85 mt-0.5 leading-tight">{stat.label}</p>
                   </div>
                 ))}
               </div>

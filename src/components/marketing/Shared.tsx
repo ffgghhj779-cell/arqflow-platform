@@ -230,7 +230,7 @@ export function PlanCard({
           "h-full flex flex-col p-6 sm:p-8 relative overflow-hidden rounded-2xl border transition-all duration-300",
           isHighlighted
             ? /* dark navy card — premium */
-              "bg-[#0a1628] border-[rgba(var(--accent-rgb),0.4)] text-white"
+              "bg-[#2a6b73] border-[rgba(var(--accent-rgb),0.4)] text-white"
             : /* light card */
               "card bg-elev text-app"
         )}
@@ -238,7 +238,7 @@ export function PlanCard({
           y: -6,
           boxShadow: isHighlighted
             ? "0 24px 64px rgba(var(--accent-rgb), 0.25), 0 0 0 1px rgba(var(--accent-rgb), 0.3)"
-            : "0 16px 48px rgba(14,32,56,0.08), 0 0 0 1px rgba(var(--accent-rgb),0.15)",
+            : "0 16px 48px rgba(13,34,54,0.08), 0 0 0 1px rgba(var(--accent-rgb),0.15)",
           transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
         }}
       >
@@ -318,7 +318,7 @@ export function PlanCard({
           className={cn(
             "mt-7 w-full text-center py-3.5 px-6 rounded-lg font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2",
             isHighlighted
-              ? "bg-[var(--accent)] text-[#050b14] hover:bg-white hover:text-[#0a1628] shadow-lg shadow-[rgba(var(--accent-rgb),0.3)]"
+              ? "bg-[var(--accent)] text-[#fbfaf7] hover:bg-white hover:text-[#2a6b73] shadow-lg shadow-[rgba(var(--accent-rgb),0.3)]"
               : "btn-outline"
           )}
         >
@@ -365,7 +365,7 @@ export function CTABanner({
       <div
         className="absolute inset-0 -z-0"
         style={{
-          background: "linear-gradient(135deg, #0a1628 0%, #0e2038 50%, #0d2a2a 100%)",
+          background: "linear-gradient(135deg, #2a6b73 0%, #0d2236 50%, #0d2a2a 100%)",
         }}
         aria-hidden
       />
@@ -373,14 +373,14 @@ export function CTABanner({
       {/* Mesh orbs */}
       <motion.div
         className="absolute -top-32 -start-20 w-[500px] h-[500px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(45,212,191,0.12) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(95,212,189,0.12) 0%, transparent 70%)" }}
         animate={{ scale: [1, 1.1, 1], opacity: [0.5, 1, 0.5] }}
         transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
         aria-hidden
       />
       <motion.div
         className="absolute -bottom-20 -end-10 w-[400px] h-[400px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(20,184,166,0.1) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(18,160,138,0.1) 0%, transparent 70%)" }}
         animate={{ scale: [1.05, 1, 1.05], opacity: [0.4, 0.8, 0.4] }}
         transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         aria-hidden
@@ -442,7 +442,7 @@ export function CTABanner({
           >
             <Link
               href="/pricing"
-              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-lg font-bold text-sm bg-[var(--accent)] text-[#050b14] hover:bg-white hover:text-[#0a1628] transition-all duration-300 shadow-lg shadow-[rgba(var(--accent-rgb),0.3)] hover:shadow-[rgba(var(--accent-rgb),0.5)] hover:-translate-y-1"
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-lg font-bold text-sm bg-[var(--accent)] text-[#fbfaf7] hover:bg-white hover:text-[#2a6b73] transition-all duration-300 shadow-lg shadow-[rgba(var(--accent-rgb),0.3)] hover:shadow-[rgba(var(--accent-rgb),0.5)] hover:-translate-y-1"
             >
               {t.start}
               <DirArrow />

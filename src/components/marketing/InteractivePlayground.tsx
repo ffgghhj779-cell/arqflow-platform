@@ -207,13 +207,13 @@ export function InteractivePlayground() {
           className="glass-strong card-elevated rounded-2xl sm:rounded-3xl overflow-hidden border border-app shadow-2xl max-w-3xl mx-auto"
         >
           {/* WhatsApp Header */}
-          <div className="bg-[#0b141a] text-white px-4 py-3.5 flex items-center justify-between border-b border-white/10">
+          <div className="bg-[#245f67] text-white px-4 py-3.5 flex items-center justify-between border-b border-white/10">
             <div className="flex items-center gap-3">
               <div className="relative">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-teal-500 to-emerald-400 flex items-center justify-center text-white shadow-md">
                   <Bot className="w-5 h-5" />
                 </div>
-                <span className="absolute bottom-0 end-0 w-3 h-3 rounded-full bg-emerald-400 border-2 border-[#0b141a]" />
+                <span className="absolute bottom-0 end-0 w-3 h-3 rounded-full bg-emerald-400 border-2 border-[#245f67]" />
               </div>
               <div className="text-start">
                 <div className="flex items-center gap-1.5">
@@ -269,7 +269,7 @@ export function InteractivePlayground() {
                     className={cn(
                       "max-w-[88%] sm:max-w-[75%] rounded-2xl px-3.5 py-2 sm:px-4 sm:py-2.5 text-xs sm:text-sm shadow-sm relative leading-relaxed",
                       isUser
-                        ? "bg-[#0f766e] text-white rounded-br-xs"
+                        ? "bg-[#0b6b5d] text-white rounded-br-xs"
                         : "bg-[var(--bg-elev)] text-app border border-app rounded-bl-xs"
                     )}
                   >
@@ -344,7 +344,7 @@ export function InteractivePlayground() {
             <button
               type="submit"
               disabled={!inputText.trim() || isTyping}
-              className="w-10 h-10 rounded-xl bg-[var(--accent)] text-[#050b14] flex items-center justify-center shrink-0 disabled:opacity-40 hover:bg-white transition-all shadow-md touch-manipulation"
+              className="w-10 h-10 rounded-xl bg-[var(--accent)] text-[#fbfaf7] flex items-center justify-center shrink-0 disabled:opacity-40 hover:bg-white transition-all shadow-md touch-manipulation"
               aria-label="Send"
             >
               <Send className={cn("w-4 h-4", dir === "rtl" && "rotate-180")} />

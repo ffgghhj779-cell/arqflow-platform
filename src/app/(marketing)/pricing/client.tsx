@@ -294,7 +294,7 @@ function PaymentMethods({ config }: { config: PaymentAccountsConfig }) {
             )}
           </div>
 
-          <div className="mt-6 text-center text-xs text-muted max-w-xl mx-auto bg-[rgba(14,32,56,0.03)] p-3 rounded-lg border border-app">
+          <div className="mt-6 text-center text-xs text-muted max-w-xl mx-auto bg-[rgba(13,34,54,0.03)] p-3 rounded-lg border border-app">
             {lang === "ar" ? (config.notice_ar || t.notice) : (config.notice_en || t.notice)}
           </div>
         </div>

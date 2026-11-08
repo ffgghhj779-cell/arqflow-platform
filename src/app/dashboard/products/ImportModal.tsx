@@ -346,7 +346,7 @@ export default function ImportModal({ open, onClose, businessId, onSuccess }: Pr
                 setSourceType("file");
                 setStep("upload");
               }}
-              className="p-5 rounded-xl text-start flex flex-col gap-3 transition-all border border-[var(--border)] hover:border-accent bg-[rgba(14,32,56,0.02)]"
+              className="p-5 rounded-xl text-start flex flex-col gap-3 transition-all border border-[var(--border)] hover:border-accent bg-[rgba(13,34,54,0.02)]"
             >
               <span className="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-teal to-brand-sky flex items-center justify-center text-white shrink-0 shadow-sm">
                 <FileText className="w-5 h-5" />
@@ -362,7 +362,7 @@ export default function ImportModal({ open, onClose, businessId, onSuccess }: Pr
                 setSourceType("google");
                 setStep("upload");
               }}
-              className="p-5 rounded-xl text-start flex flex-col gap-3 transition-all border border-[var(--border)] hover:border-accent bg-[rgba(14,32,56,0.02)]"
+              className="p-5 rounded-xl text-start flex flex-col gap-3 transition-all border border-[var(--border)] hover:border-accent bg-[rgba(13,34,54,0.02)]"
             >
               <span className="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-teal to-brand-sky flex items-center justify-center text-white shrink-0 shadow-sm">
                 <LinkIcon className="w-5 h-5" />
@@ -396,7 +396,7 @@ export default function ImportModal({ open, onClose, businessId, onSuccess }: Pr
                 onDragOver={handleDragOver}
                 onDrop={handleDrop}
                 onClick={() => fileInputRef.current?.click()}
-                className="border-2 border-dashed border-[var(--border)] rounded-2xl flex flex-col items-center justify-center gap-3 py-10 px-4 cursor-pointer hover:border-accent hover:bg-[rgba(14,32,56,0.03)] transition-all bg-[rgba(14,32,56,0.01)]"
+                className="border-2 border-dashed border-[var(--border)] rounded-2xl flex flex-col items-center justify-center gap-3 py-10 px-4 cursor-pointer hover:border-accent hover:bg-[rgba(13,34,54,0.03)] transition-all bg-[rgba(13,34,54,0.01)]"
               >
                 <Upload className="w-8 h-8 text-accent animate-pulse" />
                 <p className="font-semibold text-sm">{currentT.dragDrop}</p>
@@ -411,7 +411,7 @@ export default function ImportModal({ open, onClose, businessId, onSuccess }: Pr
               </div>
 
               {file && (
-                <div className="flex items-center gap-3 rounded-xl border border-[var(--border)] bg-[rgba(14,32,56,0.03)] px-4 py-3">
+                <div className="flex items-center gap-3 rounded-xl border border-[var(--border)] bg-[rgba(13,34,54,0.03)] px-4 py-3">
                   <FileText className="w-5 h-5 text-accent shrink-0" />
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-semibold truncate" dir="ltr" style={{ textAlign: "start" }}>{file.name}</p>
@@ -440,7 +440,7 @@ export default function ImportModal({ open, onClose, businessId, onSuccess }: Pr
                   style={{ textAlign: "start" }}
                 />
               </Field>
-              <p className="text-xs text-muted flex items-start gap-1.5 leading-relaxed bg-[rgba(14,32,56,0.03)] border border-[var(--border)] rounded-xl p-3">
+              <p className="text-xs text-muted flex items-start gap-1.5 leading-relaxed bg-[rgba(13,34,54,0.03)] border border-[var(--border)] rounded-xl p-3">
                 <HelpCircle className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                 <span>{currentT.googleLinkHint}</span>
               </p>
@@ -480,25 +480,25 @@ export default function ImportModal({ open, onClose, businessId, onSuccess }: Pr
         <div className="space-y-6">
           {/* stats overview cards */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <div className="p-3 rounded-xl border border-[var(--border)] bg-[rgba(14,32,56,0.02)] flex flex-col gap-1">
+            <div className="p-3 rounded-xl border border-[var(--border)] bg-[rgba(13,34,54,0.02)] flex flex-col gap-1">
               <span className="text-xs text-muted">{currentT.extractedItems}</span>
               <span className="text-lg font-bold flex items-center gap-2">
                 <FileText className="w-4 h-4 text-accent" /> {stats.total}
               </span>
             </div>
-            <div className="p-3 rounded-xl border border-[var(--border)] bg-[rgba(14,32,56,0.02)] flex flex-col gap-1">
+            <div className="p-3 rounded-xl border border-[var(--border)] bg-[rgba(13,34,54,0.02)] flex flex-col gap-1">
               <span className="text-xs text-muted">{currentT.missingPrices}</span>
               <span className={cn("text-lg font-bold flex items-center gap-2", stats.missingPrices > 0 && "text-[var(--danger)]")}>
                 <AlertCircle className="w-4 h-4" /> {stats.missingPrices}
               </span>
             </div>
-            <div className="p-3 rounded-xl border border-[var(--border)] bg-[rgba(14,32,56,0.02)] flex flex-col gap-1">
+            <div className="p-3 rounded-xl border border-[var(--border)] bg-[rgba(13,34,54,0.02)] flex flex-col gap-1">
               <span className="text-xs text-muted">{currentT.duplicateNames}</span>
               <span className={cn("text-lg font-bold flex items-center gap-2", stats.duplicates > 0 && "text-amber-500")}>
                 <AlertCircle className="w-4 h-4" /> {stats.duplicates}
               </span>
             </div>
-            <div className="p-3 rounded-xl border border-[var(--border)] bg-[rgba(14,32,56,0.02)] flex flex-col gap-1">
+            <div className="p-3 rounded-xl border border-[var(--border)] bg-[rgba(13,34,54,0.02)] flex flex-col gap-1">
               <span className="text-xs text-muted">{currentT.emptyDescriptions}</span>
               <span className="text-lg font-bold flex items-center gap-2">
                 <AlertCircle className="w-4 h-4 text-muted" /> {stats.emptyDescriptions}
@@ -540,7 +540,7 @@ export default function ImportModal({ open, onClose, businessId, onSuccess }: Pr
                         "rounded-xl border p-4 relative",
                         (isDupe || isMissingPrice) 
                           ? "border-l-4 border-[var(--border)] border-l-[var(--danger)] bg-[rgba(248,113,113,0.02)]" 
-                          : "border-[var(--border)] bg-[rgba(14,32,56,0.02)]"
+                          : "border-[var(--border)] bg-[rgba(13,34,54,0.02)]"
                       )}
                     >
                       <button

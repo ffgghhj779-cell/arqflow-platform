@@ -84,7 +84,7 @@ function ProvisioningPlaceholder({ business, lang }: { business: Business; lang:
                     ? "bg-[rgba(74,222,128,0.15)] text-[var(--success)]"
                     : i === activeStep
                     ? "bg-[rgba(184,144,99,0.2)] text-accent animate-pulse"
-                    : "bg-[rgba(14,32,56,0.06)] text-muted"
+                    : "bg-[rgba(13,34,54,0.06)] text-muted"
                 )}
               >
                 {i < activeStep ? <CheckCircle className="w-4 h-4" /> : i + 1}
@@ -212,7 +212,7 @@ export default function DashboardShell({ profile, business, capabilities, unread
           <div className="flex items-center justify-between mb-3">
             <Link href="/dashboard/overview" className="flex items-center gap-2">
               <motion.div
-                className="w-8 h-8 rounded-xl bg-gradient-to-br from-[var(--accent)] to-[#0e2038] flex items-center justify-center shadow-md"
+                className="w-8 h-8 rounded-xl bg-gradient-to-br from-[var(--accent)] to-[#0d2236] flex items-center justify-center shadow-md"
                 whileHover={{ scale: 1.08, rotate: 3 }}
                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
               >
@@ -262,7 +262,7 @@ export default function DashboardShell({ profile, business, capabilities, unread
                 >
                   <Icon className="w-4 h-4 shrink-0" />
                   <span className="truncate">{label}</span>
-                  <span className="ms-auto shrink-0 text-[9px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded-md bg-[rgba(14,32,56,0.07)] text-muted">
+                  <span className="ms-auto shrink-0 text-[9px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded-md bg-[rgba(13,34,54,0.07)] text-muted">
                     {soonLabel}
                   </span>
                 </div>

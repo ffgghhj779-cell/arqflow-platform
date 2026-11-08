@@ -2001,7 +2001,7 @@ export default function OnboardingWizard({
 
                   {/* live summary */}
                   {form.working_hours && (
-                    <div className="flex items-start gap-2 text-sm text-muted rounded-lg border border-app px-3 py-2 bg-[rgba(14,32,56,0.06)]">
+                    <div className="flex items-start gap-2 text-sm text-muted rounded-lg border border-app px-3 py-2 bg-[rgba(13,34,54,0.06)]">
                       <Clock className="w-4 h-4 mt-0.5 text-accent shrink-0" />
                       <span dir="auto">{form.working_hours}</span>
                     </div>
@@ -2075,7 +2075,7 @@ export default function OnboardingWizard({
             {(() => {
               if (!form.business_type) {
                 return (
-                  <div className="flex flex-col items-center justify-center p-6 border border-dashed border-app rounded-2xl bg-[rgba(14,32,56,0.02)]">
+                  <div className="flex flex-col items-center justify-center p-6 border border-dashed border-app rounded-2xl bg-[rgba(13,34,54,0.02)]">
                     <span className="text-sm font-semibold text-muted text-center">
                       {lang === "ar" 
                         ? "اختر نوع النشاط أولاً لتحديد الأسئلة الخاصة بك" 
@@ -2166,7 +2166,7 @@ export default function OnboardingWizard({
                       className={cn(
                         "rounded-2xl border p-4 text-start transition-all flex flex-col gap-2",
                         on
-                          ? "border-accent bg-[rgba(14,32,56,0.1)] shadow-[0_0_0_1px_var(--accent)]"
+                          ? "border-accent bg-[rgba(13,34,54,0.1)] shadow-[0_0_0_1px_var(--accent)]"
                           : "border-app hover:border-strong"
                       )}
                     >
@@ -2376,7 +2376,7 @@ export default function OnboardingWizard({
                       className={cn(
                         "rounded-2xl border p-4 text-start transition-all",
                         on
-                          ? "border-accent bg-[rgba(14,32,56,0.1)] shadow-[0_0_0_1px_var(--accent)]"
+                          ? "border-accent bg-[rgba(13,34,54,0.1)] shadow-[0_0_0_1px_var(--accent)]"
                           : "border-app hover:border-strong"
                       )}
                     >
@@ -2417,16 +2417,16 @@ export default function OnboardingWizard({
                         <h4 className="font-bold text-sm">{lang === "ar" ? "بيانات التحويل البنكي" : "Bank Transfer Details"}</h4>
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                        <div className="p-3 rounded-lg border border-app bg-[rgba(14,32,56,0.02)]">
+                        <div className="p-3 rounded-lg border border-app bg-[rgba(13,34,54,0.02)]">
                           <span className="text-muted block mb-1">{lang === "ar" ? "اسم البنك" : "Bank Name"}</span>
                           <span className="font-bold text-sm">{paymentConfig.bank_transfer.bank_name}</span>
                         </div>
-                        <div className="p-3 rounded-lg border border-app bg-[rgba(14,32,56,0.02)]">
+                        <div className="p-3 rounded-lg border border-app bg-[rgba(13,34,54,0.02)]">
                           <span className="text-muted block mb-1">{lang === "ar" ? "اسم المستفيد" : "Beneficiary Name"}</span>
                           <span className="font-bold text-sm">{paymentConfig.bank_transfer.account_holder}</span>
                         </div>
                         {paymentConfig.bank_transfer.account_number && (
-                          <div className="p-3 rounded-lg border border-app bg-[rgba(14,32,56,0.02)] sm:col-span-2 flex items-center justify-between">
+                          <div className="p-3 rounded-lg border border-app bg-[rgba(13,34,54,0.02)] sm:col-span-2 flex items-center justify-between">
                             <div>
                               <span className="text-muted block mb-1">{lang === "ar" ? "رقم الحساب" : "Account Number"}</span>
                               <span className="font-mono font-bold text-sm text-accent" dir="ltr">{paymentConfig.bank_transfer.account_number}</span>
@@ -2442,7 +2442,7 @@ export default function OnboardingWizard({
                           </div>
                         )}
                         {paymentConfig.bank_transfer.iban && (
-                          <div className="p-3 rounded-lg border border-app bg-[rgba(14,32,56,0.02)] sm:col-span-2 flex items-center justify-between">
+                          <div className="p-3 rounded-lg border border-app bg-[rgba(13,34,54,0.02)] sm:col-span-2 flex items-center justify-between">
                             <div>
                               <span className="text-muted block mb-1">{lang === "ar" ? "رقم الآيبان الدولي (IBAN)" : "IBAN"}</span>
                               <span className="font-mono font-semibold text-xs text-app" dir="ltr">{paymentConfig.bank_transfer.iban}</span>
@@ -2871,7 +2871,7 @@ function DynamicSection({
             <button
               type="button"
               onClick={onImport}
-              className="btn-outline !py-1.5 !px-3 text-xs border-accent text-accent hover:bg-[rgba(14,32,56,0.1)] inline-flex items-center gap-1"
+              className="btn-outline !py-1.5 !px-3 text-xs border-accent text-accent hover:bg-[rgba(13,34,54,0.1)] inline-flex items-center gap-1"
             >
               <Upload className="w-3.5 h-3.5" />
               {importLabel}
@@ -3041,7 +3041,7 @@ function OrderFieldsPicker({
                 "inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-semibold border",
                 locked
                   ? "border-accent bg-[rgba(184,144,99,0.2)] text-app"
-                  : "border-app bg-[rgba(14,32,56,0.08)] text-app"
+                  : "border-app bg-[rgba(13,34,54,0.08)] text-app"
               )}
             >
               <Check className="w-3.5 h-3.5 text-accent" />

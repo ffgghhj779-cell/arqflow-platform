@@ -107,9 +107,9 @@ export function VoiceNoteSimulator() {
 
         <div className="mt-12 sm:mt-16 max-w-4xl mx-auto">
           <Reveal>
-            <div className="rounded-3xl border border-slate-700/60 bg-[#070e17] text-white shadow-2xl p-6 sm:p-9 relative overflow-hidden">
+            <div className="rounded-3xl border border-white/20 bg-[#2a6b73] text-white shadow-2xl p-6 sm:p-9 relative overflow-hidden">
               {/* Radial glow */}
-              <div className="absolute top-0 end-0 w-80 h-80 bg-[radial-gradient(circle,rgba(20,184,166,0.12)_0%,transparent_70%)] pointer-events-none" />
+              <div className="absolute top-0 end-0 w-80 h-80 bg-[radial-gradient(circle,rgba(18,160,138,0.12)_0%,transparent_70%)] pointer-events-none" />
 
               {/* Voice Note Player Header */}
               <div className="flex items-center justify-between pb-5 border-b border-white/10">
@@ -119,7 +119,7 @@ export function VoiceNoteSimulator() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white">{t.customerName}</p>
-                    <p className="text-[11px] text-slate-400 flex items-center gap-1">
+                    <p className="text-[11px] text-white/75 flex items-center gap-1">
                       <Mic className="w-3 h-3 text-teal-400" />
                       <span>{lang === "ar" ? "رسالة صوتية (واتساب)" : "WhatsApp Voice Note"}</span>
                     </p>
@@ -134,12 +134,12 @@ export function VoiceNoteSimulator() {
               </div>
 
               {/* Waveform Player Bar */}
-              <div className="mt-6 bg-[#0c1827] border border-white/10 rounded-2xl p-4 sm:p-5 flex items-center gap-4">
+              <div className="mt-6 bg-[#245f67] border border-white/10 rounded-2xl p-4 sm:p-5 flex items-center gap-4">
                 {/* Play/Pause Button */}
                 <button
                   type="button"
                   onClick={togglePlay}
-                  className="w-12 h-12 rounded-full bg-gradient-to-r from-teal-400 to-teal-500 text-[#050b14] flex items-center justify-center shrink-0 shadow-lg shadow-teal-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                  className="w-12 h-12 rounded-full bg-gradient-to-r from-teal-400 to-teal-500 text-[#fbfaf7] flex items-center justify-center shrink-0 shadow-lg shadow-teal-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
                   aria-label={isPlaying ? "Pause" : "Play"}
                 >
                   {isPlaying ? <Pause className="w-5 h-5 fill-current" /> : <Play className="w-5 h-5 fill-current ms-0.5" />}
@@ -177,7 +177,7 @@ export function VoiceNoteSimulator() {
                 </div>
               </div>
 
-              <p className="text-[11px] text-slate-400 text-center mt-2.5">
+              <p className="text-[11px] text-white/75 text-center mt-2.5">
                 {t.playHint}
               </p>
 
@@ -191,7 +191,7 @@ export function VoiceNoteSimulator() {
                     className="mt-6 space-y-4 pt-6 border-t border-white/10"
                   >
                     {/* Live Transcription Box */}
-                    <div className="bg-[#0e1d2f] border border-teal-500/30 rounded-2xl p-4">
+                    <div className="bg-[#34777f] border border-teal-500/30 rounded-2xl p-4">
                       <p className="text-xs font-bold text-teal-300 flex items-center gap-1.5 mb-1.5">
                         <Sparkles className="w-3.5 h-3.5" />
                         {t.transcriptionLabel}
@@ -203,16 +203,16 @@ export function VoiceNoteSimulator() {
 
                     {/* AI Insights 3-col Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                      <div className="bg-[#0a1625] border border-white/10 rounded-xl p-3">
-                        <p className="text-[10px] text-slate-400 mb-0.5">{t.dialectLabel}</p>
+                      <div className="bg-[#245f67] border border-white/10 rounded-xl p-3">
+                        <p className="text-[10px] text-white/75 mb-0.5">{t.dialectLabel}</p>
                         <p className="text-xs font-bold text-emerald-400">{t.dialectVal}</p>
                       </div>
-                      <div className="bg-[#0a1625] border border-white/10 rounded-xl p-3">
-                        <p className="text-[10px] text-slate-400 mb-0.5">{t.intentLabel}</p>
+                      <div className="bg-[#245f67] border border-white/10 rounded-xl p-3">
+                        <p className="text-[10px] text-white/75 mb-0.5">{t.intentLabel}</p>
                         <p className="text-xs font-bold text-sky-400">{t.intentVal}</p>
                       </div>
-                      <div className="bg-[#0a1625] border border-white/10 rounded-xl p-3">
-                        <p className="text-[10px] text-slate-400 mb-0.5">{t.speedLabel}</p>
+                      <div className="bg-[#245f67] border border-white/10 rounded-xl p-3">
+                        <p className="text-[10px] text-white/75 mb-0.5">{t.speedLabel}</p>
                         <p className="text-xs font-bold text-amber-400 flex items-center gap-1">
                           <Zap className="w-3 h-3 text-amber-400" />
                           {t.speedVal}
@@ -223,7 +223,7 @@ export function VoiceNoteSimulator() {
                     {/* Bot Smart Response */}
                     <div className="bg-gradient-to-r from-teal-500/15 to-emerald-500/10 border border-teal-500/30 rounded-2xl p-4">
                       <div className="flex items-center gap-2 mb-2">
-                        <div className="w-6 h-6 rounded-full bg-teal-400 text-[#050b14] flex items-center justify-center font-bold text-xs">
+                        <div className="w-6 h-6 rounded-full bg-teal-400 text-[#fbfaf7] flex items-center justify-center font-bold text-xs">
                           <Bot className="w-3.5 h-3.5" />
                         </div>
                         <span className="text-xs font-bold text-teal-300">{t.botReplyTitle}</span>

@@ -120,7 +120,7 @@ export default function CustomersClient({ businessId, initialCustomers }: Props)
                   <>
                     <tr
                       key={c.id}
-                      className="border-b border-[var(--border)] hover:bg-[rgba(14,32,56,0.04)] cursor-pointer"
+                      className="border-b border-[var(--border)] hover:bg-[rgba(13,34,54,0.04)] cursor-pointer"
                       onClick={() => setExpanded(expanded === c.id ? null : c.id)}
                     >
                       <td className="p-3 font-medium">{c.name ?? "—"}</td>

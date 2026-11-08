@@ -263,7 +263,7 @@ export default function ProvisioningScreen({ business }: Props) {
         aria-hidden
       />
       <div
-        className="absolute bottom-1/4 end-1/4 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(14,32,56,0.12)_0%,transparent_70%)] pointer-events-none"
+        className="absolute bottom-1/4 end-1/4 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(13,34,54,0.12)_0%,transparent_70%)] pointer-events-none"
         aria-hidden
       />
 

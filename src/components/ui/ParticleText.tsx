@@ -39,17 +39,17 @@ const SPRING_FORCE   = 0.085;    // return spring
 const FRICTION       = 0.82;     // damping
 
 const LIGHT_COLOR_STOPS: [number, string][] = [
-  [0.0,  "#0e2038"],   // midnight navy
-  [0.25, "#0f766e"],   // deep teal
-  [0.6,  "#14b8a6"],   // vibrant teal
+  [0.0,  "#0d2236"],   // midnight navy
+  [0.25, "#0b6b5d"],   // deep teal
+  [0.6,  "#12a08a"],   // vibrant teal
   [0.85, "#06b6d4"],   // bright cyan
-  [1.0,  "#2dd4bf"],   // mint cyan glow
+  [1.0,  "#5fd4bd"],   // mint cyan glow
 ];
 
 const DARK_COLOR_STOPS: [number, string][] = [
   [0.0,  "#5eead4"],   // light mint teal
-  [0.3,  "#2dd4bf"],   // bright teal
-  [0.65, "#14b8a6"],   // primary teal
+  [0.3,  "#5fd4bd"],   // bright teal
+  [0.65, "#12a08a"],   // primary teal
   [0.85, "#38bdf8"],   // sky cyan glow
   [1.0,  "#818cf8"],   // soft indigo shimmer
 ];

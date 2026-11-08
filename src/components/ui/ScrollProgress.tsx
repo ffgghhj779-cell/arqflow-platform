@@ -31,7 +31,7 @@ export function ScrollProgressBar() {
         style={{
           scaleX,
           transformOrigin: dir === "rtl" ? "100% 50%" : "0% 50%",
-          boxShadow: "0 0 14px rgba(45, 212, 191, 0.8), 0 0 4px rgba(56, 189, 248, 0.6)",
+          boxShadow: "0 0 14px rgba(95, 212, 189, 0.8), 0 0 4px rgba(56, 189, 248, 0.6)",
         }}
       />
     </div>

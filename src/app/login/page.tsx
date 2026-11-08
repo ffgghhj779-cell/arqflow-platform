@@ -93,7 +93,7 @@ function LoginForm() {
       />
       <div
         className="absolute -bottom-32 -end-32 w-[450px] h-[450px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(14, 32, 56, 0.15) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(13, 34, 54, 0.15) 0%, transparent 70%)" }}
         aria-hidden
       />
 

@@ -206,7 +206,7 @@ export default function Interactive3DObject() {
         grad.addColorStop(0.2, "rgba(215, 218, 218, 0.85)");   // lit surface
         grad.addColorStop(0.55, "rgba(168, 178, 178, 0.75)");   // body shade
         grad.addColorStop(0.85, "rgba(100, 114, 114, 0.65)");   // shadow core
-        grad.addColorStop(1, "rgba(14, 32, 56, 0.15)");         // shadow edge blending
+        grad.addColorStop(1, "rgba(13, 34, 54, 0.15)");         // shadow edge blending
 
         ctx.fillStyle = grad;
         ctx.beginPath();

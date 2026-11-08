@@ -137,7 +137,7 @@ export default function AIManagementPanel({ businessId, systemPrompt, initialFil
           {files.length === 0 ? (
             <p className="text-muted text-sm">{t.noFiles}</p>
           ) : files.map((f) => (
-            <div key={f.id} className="flex items-center gap-3 p-2.5 rounded-xl bg-[rgba(14,32,56,0.04)]">
+            <div key={f.id} className="flex items-center gap-3 p-2.5 rounded-xl bg-[rgba(13,34,54,0.04)]">
               {f.kind === "image" ? <ImageIcon className="w-4 h-4 text-accent shrink-0" /> : <FileText className="w-4 h-4 text-accent shrink-0" />}
               <span className="text-sm truncate flex-1">{f.file_name}</span>
               <button onClick={() => deleteFile(f)} className="btn-ghost !p-1.5 text-[var(--danger)]"><Trash2 className="w-3.5 h-3.5" /></button>

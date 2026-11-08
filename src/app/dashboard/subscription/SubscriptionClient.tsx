@@ -277,7 +277,7 @@ export default function SubscriptionClient({
               <span>{t.remaining}</span>
               <span className="font-semibold">{formatEGP(remainingDisplay, lang)} {t.of} {formatEGP(walletTotal, lang)}</span>
             </div>
-            <div className="h-3 rounded-full bg-[rgba(14,32,56,0.1)] overflow-hidden">
+            <div className="h-3 rounded-full bg-[rgba(13,34,54,0.1)] overflow-hidden">
               <div className="h-full rounded-full transition-all" style={{ width: `${usedPct}%`, background: usedPct > 85 ? "var(--danger)" : usedPct > 65 ? "var(--warning)" : "var(--accent)" }} />
             </div>
             <div className="flex justify-between text-xs text-muted">
@@ -363,7 +363,7 @@ export default function SubscriptionClient({
         ) : (
           <div className="space-y-5">
             {/* amount */}
-            <div className="rounded-xl bg-[rgba(14,32,56,0.08)] border border-[var(--accent)]/30 p-4">
+            <div className="rounded-xl bg-[rgba(13,34,54,0.08)] border border-[var(--accent)]/30 p-4">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-xs text-muted">{t.amountDue}</p>
@@ -390,7 +390,7 @@ export default function SubscriptionClient({
                     className={cn(
                       "rounded-xl border p-3 text-center text-sm transition flex flex-col items-center justify-center gap-1",
                       method === ch
-                        ? "border-[var(--accent)] bg-[rgba(14,32,56,0.1)] shadow-[0_0_0_1px_var(--accent)]"
+                        ? "border-[var(--accent)] bg-[rgba(13,34,54,0.1)] shadow-[0_0_0_1px_var(--accent)]"
                         : "border-[var(--border)] hover:border-strong"
                     )}
                   >
@@ -403,7 +403,7 @@ export default function SubscriptionClient({
               {/* method details */}
               <div className="mt-3">
                 {method === "bank_transfer" ? (
-                  <div className="rounded-xl bg-[rgba(14,32,56,0.04)] p-4 text-xs space-y-2 border border-app">
+                  <div className="rounded-xl bg-[rgba(13,34,54,0.04)] p-4 text-xs space-y-2 border border-app">
                     <div className="flex justify-between py-0.5 border-b border-app">
                       <span className="text-muted">{lang === "ar" ? "اسم البنك:" : "Bank:"}</span>
                       <span className="font-bold">{paymentConfig.bank_transfer.bank_name}</span>
@@ -446,7 +446,7 @@ export default function SubscriptionClient({
                     )}
                   </div>
                 ) : method === "card" ? (
-                  <div className="rounded-xl bg-[rgba(14,32,56,0.04)] p-4 text-xs space-y-2 border border-app">
+                  <div className="rounded-xl bg-[rgba(13,34,54,0.04)] p-4 text-xs space-y-2 border border-app">
                     <p className="text-muted leading-relaxed">
                       {paymentConfig.card.instructions || (lang === "ar" ? "ادفع بالفيزا أو ماستركارد بأمان عبر بوابتنا المعتمدة." : "Pay securely using Visa or Mastercard.")}
                     </p>
@@ -463,7 +463,7 @@ export default function SubscriptionClient({
                     )}
                   </div>
                 ) : (
-                  <div className="rounded-lg bg-[rgba(14,32,56,0.04)] p-3 text-sm flex items-center justify-between">
+                  <div className="rounded-lg bg-[rgba(13,34,54,0.04)] p-3 text-sm flex items-center justify-between">
                     <span className="text-muted">{t.transferTo}</span>
                     {(() => {
                       const num =

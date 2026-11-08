@@ -78,7 +78,7 @@ export function MeshBackground({
       <motion.div
         className="absolute -top-32 -start-32 w-[600px] h-[600px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(20,184,166,0.12) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(18,160,138,0.12) 0%, transparent 70%)",
         }}
         animate={{ scale: [1, 1.08, 1], opacity: [0.6, 1, 0.6] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
@@ -87,7 +87,7 @@ export function MeshBackground({
       <motion.div
         className="absolute -bottom-40 -end-24 w-[500px] h-[500px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(14,32,56,0.09) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(13,34,54,0.09) 0%, transparent 70%)",
         }}
         animate={{ scale: [1.05, 1, 1.05], opacity: [0.5, 0.9, 0.5] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
@@ -96,7 +96,7 @@ export function MeshBackground({
       <motion.div
         className="absolute top-1/3 end-1/4 w-[280px] h-[280px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(20,184,166,0.08) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(18,160,138,0.08) 0%, transparent 70%)",
         }}
         animate={{ y: [-16, 16, -16], opacity: [0.4, 0.8, 0.4] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}

@@ -83,8 +83,8 @@ export function ROICalculator() {
   return (
     <section className="py-20 sm:py-28 bg-app relative overflow-hidden border-b border-app">
       {/* Background glow orbs */}
-      <div className="absolute top-1/2 -start-32 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(20,184,166,0.08)_0%,transparent_70%)] pointer-events-none" />
-      <div className="absolute bottom-10 -end-32 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(14,32,56,0.08)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute top-1/2 -start-32 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(18,160,138,0.08)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute bottom-10 -end-32 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(13,34,54,0.08)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <SectionHeading badge={t.badge} title={t.title} subtitle={t.sub} />
@@ -198,14 +198,14 @@ export function ROICalculator() {
 
             {/* Right Column: Financial Results Card */}
             <Reveal delay={0.15} className="lg:col-span-5 h-full">
-              <div className="rounded-3xl p-6 sm:p-8 bg-[#070e17] text-white border border-slate-700/60 shadow-2xl relative overflow-hidden flex flex-col justify-between h-full">
+              <div className="rounded-3xl p-6 sm:p-8 bg-[#2a6b73] text-white border border-white/20 shadow-2xl relative overflow-hidden flex flex-col justify-between h-full">
                 {/* Background ambient radial */}
-                <div className="absolute top-0 end-0 w-64 h-64 bg-[radial-gradient(circle,rgba(45,212,191,0.15)_0%,transparent_70%)] pointer-events-none" />
+                <div className="absolute top-0 end-0 w-64 h-64 bg-[radial-gradient(circle,rgba(95,212,189,0.15)_0%,transparent_70%)] pointer-events-none" />
 
                 <div>
                   {/* Savings percentage badge */}
                   <div className="flex items-center justify-between gap-3 mb-6">
-                    <span className="text-xs text-slate-300 font-semibold">{t.savingsRate}</span>
+                    <span className="text-xs text-white/85 font-semibold">{t.savingsRate}</span>
                     <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-extrabold text-sm border border-emerald-500/30">
                       -{savingsPct}% {lang === "ar" ? "توفير" : "Saved"}
                     </span>
@@ -213,11 +213,11 @@ export function ROICalculator() {
 
                   {/* Main Highlight: Annual Savings */}
                   <div className="mb-6 pb-6 border-b border-white/10">
-                    <p className="text-xs text-slate-400 mb-1">{t.annualSavings}</p>
+                    <p className="text-xs text-white/75 mb-1">{t.annualSavings}</p>
                     <p className="text-3xl sm:text-4xl font-extrabold gradient-text-aurora font-mono tracking-tight">
                       {formatEGP(annualSavings, lang)}
                     </p>
-                    <p className="text-[11px] text-slate-400 mt-1">
+                    <p className="text-[11px] text-white/75 mt-1">
                       {lang === "ar"
                         ? `وفر شهري مباشر بقيمة ${formatEGP(monthlySavings, lang)} داخل جيبك`
                         : `Direct monthly cash saved: ${formatEGP(monthlySavings, lang)}`}
@@ -227,13 +227,13 @@ export function ROICalculator() {
                   {/* Cost comparison breakdown */}
                   <div className="space-y-3 text-xs mb-8">
                     <div className="flex justify-between items-center py-2 border-b border-white/10">
-                      <span className="text-slate-400">{t.currentCost}</span>
+                      <span className="text-white/75">{t.currentCost}</span>
                       <span className="font-mono line-through text-rose-400 font-semibold">
                         {formatEGP(currentMonthlyCost, lang)} / {lang === "ar" ? "شهر" : "mo"}
                       </span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b border-white/10">
-                      <span className="text-slate-400">
+                      <span className="text-white/75">
                         {t.arqflowCost} ({recommendedPlan.name})
                       </span>
                       <span className="font-mono text-teal-300 font-bold">

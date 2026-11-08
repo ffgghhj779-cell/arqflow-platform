@@ -34,7 +34,7 @@ const TOOLTIP_STYLE = {
     color: "#eeedd2",
     fontSize: 12,
   },
-  cursor: { fill: "rgba(14,32,56,0.04)" },
+  cursor: { fill: "rgba(13,34,54,0.04)" },
 };
 
 const AXIS_PROPS = {
@@ -129,7 +129,7 @@ export default function VisitorsClient({ analyticsData }: Props) {
           <div className="h-64 sm:h-72 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={historyData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(14,32,56,0.07)" vertical={false} />
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(13,34,54,0.07)" vertical={false} />
                 <XAxis dataKey="date" {...AXIS_PROPS} />
                 <YAxis {...AXIS_PROPS} allowDecimals={false} />
                 <Tooltip
@@ -163,7 +163,7 @@ export default function VisitorsClient({ analyticsData }: Props) {
                     <span className="text-muted">{loc.name}</span>
                     <span className="text-app font-bold">{loc.count.toLocaleString("ar-EG")}</span>
                   </div>
-                  <div className="w-full h-2.5 bg-[rgba(14,32,56,0.04)] rounded-full overflow-hidden">
+                  <div className="w-full h-2.5 bg-[rgba(13,34,54,0.04)] rounded-full overflow-hidden">
                     <div
                       className="h-full bg-[#9c542b] rounded-full transition-all duration-500 ease-out"
                       style={{ width: `${Math.max(percentage, 2)}%` }}

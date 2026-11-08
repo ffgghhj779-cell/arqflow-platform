@@ -152,7 +152,7 @@ export default function KBClient({ businessId, initialEntries }: Props) {
                 <p className="text-xs text-muted uppercase tracking-wider font-semibold">{t.unhandled}</p>
               </div>
             </div>
-            <div className="mt-4 h-2 rounded-full bg-[rgba(14,32,56,0.1)] overflow-hidden w-full max-w-md">
+            <div className="mt-4 h-2 rounded-full bg-[rgba(13,34,54,0.1)] overflow-hidden w-full max-w-md">
               <div className="h-full rounded-full bg-accent" style={{ width: '87%' }} />
             </div>
           </div>
@@ -192,7 +192,7 @@ export default function KBClient({ businessId, initialEntries }: Props) {
               {kindEntries.map((entry) => (
                 <div key={entry.id} className="border border-[var(--border)] rounded-xl overflow-hidden">
                   <div
-                    className="flex items-center gap-3 p-3 hover:bg-[rgba(14,32,56,0.04)] cursor-pointer"
+                    className="flex items-center gap-3 p-3 hover:bg-[rgba(13,34,54,0.04)] cursor-pointer"
                     onClick={() => setExpanded(expanded === entry.id ? null : entry.id)}
                   >
                     <div className="flex-1 min-w-0">

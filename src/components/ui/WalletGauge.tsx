@@ -80,7 +80,7 @@ export function WalletGauge({
         textColor: "text-accent",
         badgeBg: "bg-[rgba(var(--accent-rgb),0.1)] border-[rgba(var(--accent-rgb),0.2)] text-accent",
         fromColor: "var(--accent)",
-        toColor: "#2dd4bf",
+        toColor: "#5fd4bd",
         glow: "var(--accent-glow)",
       };
 

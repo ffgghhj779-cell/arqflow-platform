@@ -66,8 +66,8 @@ export function SiteHeader() {
         className="glass-strong !rounded-none border-x-0 border-t-0"
         animate={{
           boxShadow: scrolled
-            ? "0 4px 24px rgba(14,32,56,0.06)"
-            : "0 0 0 rgba(14,32,56,0)",
+            ? "0 4px 24px rgba(13,34,54,0.06)"
+            : "0 0 0 rgba(13,34,54,0)",
           borderColor: scrolled
             ? "rgba(var(--accent-rgb), 0.2)"
             : "var(--border)",

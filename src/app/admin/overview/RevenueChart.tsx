@@ -18,7 +18,7 @@ export default function RevenueChart({ data }: Props) {
   return (
     <ResponsiveContainer width="100%" height={220}>
       <BarChart data={data} margin={{ top: 4, right: 4, left: 0, bottom: 0 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="rgba(14,32,56,0.07)" />
+        <CartesianGrid strokeDasharray="3 3" stroke="rgba(13,34,54,0.07)" />
         <XAxis
           dataKey="label"
           tick={{ fill: "#8fb3bd", fontSize: 12 }}
@@ -41,7 +41,7 @@ export default function RevenueChart({ data }: Props) {
             fontSize: 13,
           }}
           formatter={(value: number) => [`${value.toLocaleString()} EGP`, "Revenue"]}
-          cursor={{ fill: "rgba(14,32,56,0.05)" }}
+          cursor={{ fill: "rgba(13,34,54,0.05)" }}
         />
         <Bar
           dataKey="value"

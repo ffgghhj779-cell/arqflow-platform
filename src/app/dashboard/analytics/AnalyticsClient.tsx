@@ -148,7 +148,7 @@ export default function AnalyticsClient({ messages, orders, escalations }: Props
           <h3 className="font-bold mb-4">{t.messages}</h3>
           <ResponsiveContainer width="100%" height={200}>
             <LineChart data={msgByDay}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(14,32,56,0.06)" />
+              <CartesianGrid strokeDasharray="3 3" stroke="rgba(13,34,54,0.06)" />
               <XAxis dataKey="date" tick={{ fill: "var(--fg-muted)", fontSize: 10 }} axisLine={false} tickLine={false} interval="preserveStartEnd" />
               <YAxis tick={{ fill: "var(--fg-muted)", fontSize: 10 }} axisLine={false} tickLine={false} />
               <Tooltip contentStyle={tooltipStyle} />
@@ -161,7 +161,7 @@ export default function AnalyticsClient({ messages, orders, escalations }: Props
           <h3 className="font-bold mb-4">{t.orders}</h3>
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={ordersByDay} barSize={8}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(14,32,56,0.06)" />
+              <CartesianGrid strokeDasharray="3 3" stroke="rgba(13,34,54,0.06)" />
               <XAxis dataKey="date" tick={{ fill: "var(--fg-muted)", fontSize: 10 }} axisLine={false} tickLine={false} interval="preserveStartEnd" />
               <YAxis tick={{ fill: "var(--fg-muted)", fontSize: 10 }} axisLine={false} tickLine={false} />
               <Tooltip contentStyle={tooltipStyle} />
@@ -174,7 +174,7 @@ export default function AnalyticsClient({ messages, orders, escalations }: Props
           <h3 className="font-bold mb-4">{t.cost}</h3>
           <ResponsiveContainer width="100%" height={200}>
             <AreaChart data={msgByDay}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(14,32,56,0.06)" />
+              <CartesianGrid strokeDasharray="3 3" stroke="rgba(13,34,54,0.06)" />
               <XAxis dataKey="date" tick={{ fill: "var(--fg-muted)", fontSize: 10 }} axisLine={false} tickLine={false} interval="preserveStartEnd" />
               <YAxis tick={{ fill: "var(--fg-muted)", fontSize: 10 }} axisLine={false} tickLine={false} />
               <Tooltip contentStyle={tooltipStyle} formatter={(v: number) => formatEGP(v, lang)} />
@@ -198,7 +198,7 @@ export default function AnalyticsClient({ messages, orders, escalations }: Props
                       <span className="truncate max-w-[70%]">{intent}</span>
                       <span className="text-muted">{count}</span>
                     </div>
-                    <div className="h-1.5 rounded-full bg-[rgba(14,32,56,0.1)] overflow-hidden">
+                    <div className="h-1.5 rounded-full bg-[rgba(13,34,54,0.1)] overflow-hidden">
                       <div className="h-full rounded-full bg-accent" style={{ width: `${pct}%` }} />
                     </div>
                   </div>

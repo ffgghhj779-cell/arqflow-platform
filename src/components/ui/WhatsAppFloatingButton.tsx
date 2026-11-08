@@ -55,7 +55,7 @@ export function WhatsAppFloatingButton() {
               transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.3 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative flex items-center gap-3 p-2.5 sm:p-3 rounded-full bg-[var(--color-brand-navy)] text-white backdrop-blur-xl border border-[var(--border-strong)] shadow-[0_8px_30px_rgba(14,32,56,0.25),0_0_20px_rgba(184,144,99,0.25)] hover:shadow-[0_12px_40px_rgba(14,32,56,0.35),0_0_30px_rgba(184,144,99,0.45)] hover:border-[var(--accent)] transition-all duration-300"
+              className="group relative flex items-center gap-3 p-2.5 sm:p-3 rounded-full bg-[var(--color-brand-navy)] text-white backdrop-blur-xl border border-[var(--border-strong)] shadow-[0_8px_30px_rgba(13,34,54,0.25),0_0_20px_rgba(184,144,99,0.25)] hover:shadow-[0_12px_40px_rgba(13,34,54,0.35),0_0_30px_rgba(184,144,99,0.45)] hover:border-[var(--accent)] transition-all duration-300"
             >
               {/* Pulsing Gold Glow Ring (only when closed) */}
               {!isOpen && (

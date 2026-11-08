@@ -134,7 +134,7 @@ export default function InteractiveGridBackground() {
     const render = () => {
       const isDark = themeRef.current === "dark";
       // Clear canvas with light warm cream or dark navy background
-      ctx.fillStyle = isDark ? "#050b14" : "#f9f8f5";
+      ctx.fillStyle = isDark ? "#13232f" : "#fbfaf7";
       ctx.fillRect(0, 0, width, height);
 
       const mouse = mouseRef.current;
@@ -148,9 +148,9 @@ export default function InteractiveGridBackground() {
         let strokeColor = w.color;
         if (isDark) {
           // Replace soft bronze with teal for dark mode
-          if (idx === 0) strokeColor = "rgba(45, 212, 191, 0.08)";
-          else if (idx === 1) strokeColor = "rgba(45, 212, 191, 0.05)";
-          else strokeColor = "rgba(45, 212, 191, 0.04)";
+          if (idx === 0) strokeColor = "rgba(95, 212, 189, 0.08)";
+          else if (idx === 1) strokeColor = "rgba(95, 212, 189, 0.05)";
+          else strokeColor = "rgba(95, 212, 189, 0.04)";
         }
         ctx.strokeStyle = strokeColor;
         ctx.lineWidth = w.lineWidth;
@@ -213,8 +213,8 @@ export default function InteractiveGridBackground() {
         const nearCursor = dotDist < 120;
         
         ctx.fillStyle = nearCursor 
-          ? (isDark ? "rgba(45, 212, 191, 0.25)" : "rgba(184, 144, 99, 0.22)")  // teal vs warm bronze glow near cursor
-          : (isDark ? "rgba(255, 255, 255, 0.04)" : "rgba(14, 32, 56, 0.035)");  // light white vs subtle navy baseline dot
+          ? (isDark ? "rgba(95, 212, 189, 0.25)" : "rgba(184, 144, 99, 0.22)")  // teal vs warm bronze glow near cursor
+          : (isDark ? "rgba(255, 255, 255, 0.04)" : "rgba(13, 34, 54, 0.035)");  // light white vs subtle navy baseline dot
         
         ctx.beginPath();
         ctx.arc(pt.x, pt.y, nearCursor ? 2.2 : 1.5, 0, Math.PI * 2);

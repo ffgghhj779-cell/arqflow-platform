@@ -195,7 +195,7 @@ export default function TrackerAndPopup() {
               {/* Close Button */}
               <button
                 onClick={handleDismiss}
-                className="absolute top-4 right-4 p-1.5 rounded-full hover:bg-[rgba(14,32,56,0.08)] transition-colors"
+                className="absolute top-4 right-4 p-1.5 rounded-full hover:bg-[rgba(13,34,54,0.08)] transition-colors"
                 aria-label="Close"
               >
                 <X className="w-5 h-5" />

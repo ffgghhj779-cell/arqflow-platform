@@ -171,7 +171,7 @@ export default function ConversationsClient({ businessId, initialConversations }
                 key={c.id}
                 onClick={() => setSelected(c)}
                 className={cn(
-                  "w-full text-start p-3 rounded-xl transition-all hover:bg-[rgba(14,32,56,0.06)] border",
+                  "w-full text-start p-3 rounded-xl transition-all hover:bg-[rgba(13,34,54,0.06)] border",
                   selected?.id === c.id
                     ? "bg-[rgba(184,144,99,0.12)] border-[var(--accent)]"
                     : "border-[var(--border)]"
