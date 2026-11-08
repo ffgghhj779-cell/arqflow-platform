@@ -33,7 +33,7 @@ function Hero() {
 
   const t = useT({
     ar: {
-      badge: "🔥 تحديث جديد مباشر • ١٠٠+ نشاط تجاري مصري",
+      badge: "✦ أكثر من ١٠٠ نشاط تجاري مصري يثق في ArqFlow",
       h1a: "موظف ذكاء اصطناعي",
       h1b: "يرد على عملاءك ٢٤ ساعة",
       sub: "حلول ذكية متكاملة للرد الفوري، استقبال الطلبات، وحجز المواعيد على الواتساب — بدون توقف، بدون إجازات.",
@@ -44,7 +44,7 @@ function Hero() {
       liveTag: "مباشر الآن",
     },
     en: {
-      badge: "🔥 NEW LIVE UPDATE • 100+ Egyptian Businesses",
+      badge: "✦ 100+ Egyptian Businesses Trust ArqFlow",
       h1a: "Integrated AI Employee",
       h1b: "Answering Your Customers 24/7",
       sub: "Integrated smart solutions for instant replies, order taking, and appointment booking on WhatsApp — no downtime, no days off.",

@@ -23,10 +23,10 @@ const NAV = [
 function BrandMark() {
   return (
     <>
-      <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-teal to-brand-sky flex items-center justify-center text-white shrink-0">
+      <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-teal to-brand-sky flex items-center justify-center text-white shrink-0 shadow-sm">
         <MessageCircle className="w-5 h-5" aria-hidden />
       </span>
-      <span className="gradient-text font-display">ArqFlow</span>
+      <span className="gradient-text font-display font-extrabold text-xl tracking-tight">ArqFlow</span>
     </>
   );
 }
@@ -44,7 +44,7 @@ export function SiteHeader() {
 
   // Track scroll for header elevation change
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => setScrolled(window.scrollY > 15);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -62,32 +62,28 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40">
-      {/* Unmistakable Visual Banner to verify live repo deployment */}
-      <div className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 text-[#050b14] px-4 py-2 text-center text-xs sm:text-sm font-extrabold tracking-wide flex items-center justify-center gap-2 shadow-md">
-        <span className="w-2 h-2 rounded-full bg-black animate-ping" />
-        <span>⚡ VERIFIED LIVE REPO • ARQFLOW PLATFORM v2.0 ⚡</span>
-      </div>
-
       <motion.div
         className="glass-strong !rounded-none border-x-0 border-t-0"
         animate={{
           boxShadow: scrolled
-            ? "0 4px 32px rgba(14,32,56,0.08)"
+            ? "0 4px 24px rgba(14,32,56,0.06)"
             : "0 0 0 rgba(14,32,56,0)",
           borderColor: scrolled
             ? "rgba(var(--accent-rgb), 0.2)"
             : "var(--border)",
         }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
+        transition={{ duration: 0.25, ease: "easeOut" }}
       >
         <div className="max-w-7xl mx-auto safe-x px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2 font-extrabold text-lg" aria-label="ArqFlow">
-            <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 20 }}>
+          {/* Brand Logo */}
+          <Link href="/" className="flex items-center gap-2.5 font-extrabold text-lg shrink-0" aria-label="ArqFlow">
+            <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 20 }} className="flex items-center gap-2">
               <BrandMark />
             </motion.div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-0.5">
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-1">
             {NAV.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -95,17 +91,17 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "relative px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 group",
+                    "relative px-3 py-1.5 rounded-lg text-sm font-semibold transition-colors duration-200 group",
                     isActive ? "text-app" : "text-muted hover:text-app"
                   )}
                 >
                   {pick(item.label)}
                   {/* Animated underline */}
                   <motion.span
-                    className="absolute bottom-1 start-3 end-3 h-[2px] rounded-full bg-[var(--accent)]"
+                    className="absolute bottom-0.5 start-2.5 end-2.5 h-[2px] rounded-full bg-[var(--accent)]"
                     initial={false}
                     animate={{ scaleX: isActive ? 1 : 0, opacity: isActive ? 1 : 0 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
                     style={{ transformOrigin: "0% 50%" }}
                   />
                   {/* Hover bg */}
@@ -120,36 +116,53 @@ export function SiteHeader() {
             })}
           </nav>
 
+          {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-2">
             <ThemeSwitcher />
             <button
               onClick={() => setLang(lang === "ar" ? "en" : "ar")}
-              className="btn-ghost !px-3 text-sm transition-all duration-200 hover:-translate-y-[1px]"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-muted hover:text-app hover:bg-[var(--bg-solid)] transition-all duration-150"
               aria-label="Switch language"
             >
-              <Globe className="w-4 h-4" aria-hidden />
-              {lang === "ar" ? "EN" : "عربي"}
+              <Globe className="w-3.5 h-3.5" aria-hidden />
+              <span>{lang === "ar" ? "English" : "العربية"}</span>
             </button>
-            <Link href="/login" className="btn-ghost text-sm">{t.login}</Link>
-            <Link href="/pricing" className="btn-primary !py-2.5 text-sm border-animated rounded-lg">
+            <Link href="/login" className="px-3 py-1.5 rounded-lg text-xs font-bold text-muted hover:text-app transition-colors">
+              {t.login}
+            </Link>
+            <Link
+              href="/pricing"
+              className="btn-primary !py-2 !px-4 text-xs font-bold shadow-sm shadow-[rgba(var(--accent-rgb),0.2)] rounded-lg"
+            >
               {t.start}
             </Link>
           </div>
 
-          <button
-            className="lg:!hidden btn-ghost !p-2.5 -me-1.5"
-            onClick={() => setOpen(!open)}
-            aria-label={open ? t.close : t.menu}
-            aria-expanded={open}
-            aria-controls="mobile-nav"
-          >
-            <AnimatePresence mode="wait">
-              {open
-                ? <motion.div key="x" initial={{ rotate: -45, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 45, opacity: 0 }} transition={{ duration: 0.15 }}><X className="w-6 h-6" aria-hidden /></motion.div>
-                : <motion.div key="m" initial={{ rotate: 45, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -45, opacity: 0 }} transition={{ duration: 0.15 }}><Menu className="w-6 h-6" aria-hidden /></motion.div>
-              }
-            </AnimatePresence>
-          </button>
+          {/* Mobile Right Bar */}
+          <div className="flex lg:hidden items-center gap-1.5">
+            <button
+              onClick={() => setLang(lang === "ar" ? "en" : "ar")}
+              className="btn-ghost !px-2.5 !py-1 text-xs font-bold flex items-center gap-1"
+              aria-label="Switch language"
+            >
+              <Globe className="w-3.5 h-3.5" aria-hidden />
+              <span>{lang === "ar" ? "EN" : "عربي"}</span>
+            </button>
+            <button
+              className="btn-ghost !p-2 -me-1"
+              onClick={() => setOpen(!open)}
+              aria-label={open ? t.close : t.menu}
+              aria-expanded={open}
+              aria-controls="mobile-nav"
+            >
+              <AnimatePresence mode="wait">
+                {open
+                  ? <motion.div key="x" initial={{ rotate: -45, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 45, opacity: 0 }} transition={{ duration: 0.15 }}><X className="w-5 h-5" aria-hidden /></motion.div>
+                  : <motion.div key="m" initial={{ rotate: 45, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -45, opacity: 0 }} transition={{ duration: 0.15 }}><Menu className="w-5 h-5" aria-hidden /></motion.div>
+                }
+              </AnimatePresence>
+            </button>
+          </div>
         </div>
       </motion.div>
 
