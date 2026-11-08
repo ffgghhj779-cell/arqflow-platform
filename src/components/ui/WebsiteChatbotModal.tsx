@@ -88,7 +88,7 @@ export function WebsiteChatbotModal({
               </div>
               <div>
                 <h3 className="font-bold text-sm">Arq Flow AI</h3>
-                <p className="text-xs text-gray-300">
+                <p className="text-xs text-gray-600">
                   {isLoading ? "يكتب الآن..." : "متصل الآن"}
                 </p>
               </div>
@@ -137,8 +137,8 @@ export function WebsiteChatbotModal({
                   <Bot className="w-4 h-4" />
                 </div>
                 <div className="p-3 rounded-2xl bg-white dark:bg-[#1e293b] text-gray-800 dark:text-gray-100 border border-gray-100 dark:border-gray-700 shadow-sm rounded-tl-sm flex items-center gap-2">
-                  <Loader2 className="w-4 h-4 animate-spin text-gray-500" />
-                  <span className="text-xs text-gray-500 dark:text-gray-400">يكتب...</span>
+                  <Loader2 className="w-4 h-4 animate-spin text-gray-600" />
+                  <span className="text-xs text-gray-600 dark:text-gray-400">يكتب...</span>
                 </div>
               </div>
             )}

@@ -147,7 +147,7 @@ export function EmptyState({
 }) {
   return (
     <div className="card p-10 text-center flex flex-col items-center gap-3">
-      {icon && <div className="text-muted opacity-60">{icon}</div>}
+      {icon && <div className="text-muted">{icon}</div>}
       <p className="font-bold text-lg">{title}</p>
       {body && <p className="text-muted text-sm max-w-md">{body}</p>}
       {action}

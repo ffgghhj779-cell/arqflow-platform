@@ -29,7 +29,7 @@ export default async function SimulatorPage() {
             <span className="gradient-text">ArqFlow</span>
           </Link>
           <form action="/auth/signout" method="post">
-            <button type="submit" className="btn-ghost !px-3 text-sm text-slate-500 hover:text-danger flex items-center gap-2">
+            <button type="submit" className="btn-ghost !px-3 text-sm text-slate-600 hover:text-danger flex items-center gap-2">
               <LogOut className="w-4 h-4" /> خروج
             </button>
           </form>

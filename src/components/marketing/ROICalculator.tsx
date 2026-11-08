@@ -205,19 +205,19 @@ export function ROICalculator() {
                 <div>
                   {/* Savings percentage badge */}
                   <div className="flex items-center justify-between gap-3 mb-6">
-                    <span className="text-xs text-white/85 font-semibold">{t.savingsRate}</span>
-                    <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-extrabold text-sm border border-emerald-500/30">
+                    <span className="text-xs text-white/92 font-semibold">{t.savingsRate}</span>
+                    <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-200 font-extrabold text-sm border border-emerald-500/30">
                       -{savingsPct}% {lang === "ar" ? "توفير" : "Saved"}
                     </span>
                   </div>
 
                   {/* Main Highlight: Annual Savings */}
                   <div className="mb-6 pb-6 border-b border-white/10">
-                    <p className="text-xs text-white/75 mb-1">{t.annualSavings}</p>
-                    <p className="text-3xl sm:text-4xl font-extrabold gradient-text-aurora font-mono tracking-tight">
+                    <p className="text-xs text-white/90 mb-1">{t.annualSavings}</p>
+                    <p className="text-3xl sm:text-4xl font-extrabold text-white font-mono tracking-tight">
                       {formatEGP(annualSavings, lang)}
                     </p>
-                    <p className="text-[11px] text-white/75 mt-1">
+                    <p className="text-[11px] text-white/90 mt-1">
                       {lang === "ar"
                         ? `وفر شهري مباشر بقيمة ${formatEGP(monthlySavings, lang)} داخل جيبك`
                         : `Direct monthly cash saved: ${formatEGP(monthlySavings, lang)}`}
@@ -227,16 +227,16 @@ export function ROICalculator() {
                   {/* Cost comparison breakdown */}
                   <div className="space-y-3 text-xs mb-8">
                     <div className="flex justify-between items-center py-2 border-b border-white/10">
-                      <span className="text-white/75">{t.currentCost}</span>
+                      <span className="text-white/90">{t.currentCost}</span>
                       <span className="font-mono line-through text-rose-400 font-semibold">
                         {formatEGP(currentMonthlyCost, lang)} / {lang === "ar" ? "شهر" : "mo"}
                       </span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b border-white/10">
-                      <span className="text-white/75">
+                      <span className="text-white/90">
                         {t.arqflowCost} ({recommendedPlan.name})
                       </span>
-                      <span className="font-mono text-teal-300 font-bold">
+                      <span className="font-mono text-teal-100 font-bold">
                         {formatEGP(recommendedPlan.fee, lang)} / {lang === "ar" ? "شهر" : "mo"}
                       </span>
                     </div>

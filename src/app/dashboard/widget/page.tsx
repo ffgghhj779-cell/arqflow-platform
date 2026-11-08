@@ -270,7 +270,7 @@ export default function WidgetSettingsPage() {
             </div>
 
             <div className="p-3 bg-white border-t flex gap-2">
-              <div className="flex-1 border rounded-full px-4 py-2 text-sm text-gray-400 bg-gray-50">
+              <div className="flex-1 border rounded-full px-4 py-2 text-sm text-gray-600 bg-gray-50">
                 اكتب رسالتك...
               </div>
               <div 

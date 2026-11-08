@@ -185,7 +185,7 @@ function Hero() {
               </div>
               <div className="flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full">
                 <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse-soft" />
-                <span className="text-xs text-emerald-400 font-bold">{t.liveTag}</span>
+                <span className="text-xs text-emerald-200 font-bold">{t.liveTag}</span>
               </div>
             </div>
 
@@ -199,8 +199,8 @@ function Hero() {
                     className={cn(
                       "text-xs px-3 py-2 rounded-lg font-semibold transition-all",
                       i === 1
-                        ? "bg-teal-500/20 text-teal-300 border border-teal-500/30"
-                        : "text-white/75 hover:text-white"
+                        ? "bg-teal-500/20 text-teal-100 border border-teal-500/30"
+                        : "text-white/90 hover:text-white"
                     )}
                   >
                     {item}
@@ -216,11 +216,11 @@ function Hero() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-white">عميل جديد</p>
-                    <p className="text-[10px] text-white/75">منذ ثانيتين</p>
+                    <p className="text-[10px] text-white/90">منذ ثانيتين</p>
                   </div>
                   <div className="ms-auto flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="text-[10px] text-emerald-400 font-bold">مباشر</span>
+                    <span className="text-[10px] text-emerald-200 font-bold">مباشر</span>
                   </div>
                 </div>
 
@@ -256,14 +256,14 @@ function Hero() {
               {/* Stats mini panel */}
               <div className="hidden lg:flex flex-col gap-2.5 w-36 shrink-0 border-s border-white/10 ps-3">
                 {[
-                  { label: "محادثات اليوم", value: "٤٨", color: "text-teal-400", icon: MessageCircle },
-                  { label: "طلبات مؤكدة", value: "١٢", color: "text-emerald-400", icon: CheckCircle2 },
+                  { label: "محادثات اليوم", value: "٤٨", color: "text-teal-200", icon: MessageCircle },
+                  { label: "طلبات مؤكدة", value: "١٢", color: "text-emerald-200", icon: CheckCircle2 },
                   { label: "متوسط الرد", value: "٣ث", color: "text-amber-400", icon: Clock },
                 ].map((stat) => (
                   <div key={stat.label} className="bg-[#34777f] border border-white/10 rounded-xl p-3 shadow-sm">
                     <stat.icon className={cn("w-4 h-4 mb-1", stat.color)} aria-hidden />
                     <p className={cn("text-base font-extrabold font-display", stat.color)}>{stat.value}</p>
-                    <p className="text-[10px] text-white/85 mt-0.5 leading-tight">{stat.label}</p>
+                    <p className="text-[10px] text-white/92 mt-0.5 leading-tight">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -306,7 +306,7 @@ function StatsBar() {
           <div className="glass glow-teal-sm grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 divide-x rtl:divide-x-reverse divide-[var(--border)] overflow-hidden rounded-2xl">
             {t.stats.map((s, i) => (
               <div key={s.label} className="p-6 sm:p-8 text-center group">
-                <p className="text-3xl sm:text-4xl font-extrabold gradient-text-aurora font-display">
+                <p className="text-3xl sm:text-4xl font-extrabold text-accent font-display">
                   {s.v}{s.suffix}
                 </p>
                 <p className="text-muted text-xs sm:text-sm mt-2 leading-snug">{s.label}</p>

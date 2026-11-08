@@ -157,7 +157,7 @@ function Framework() {
                 <span className="w-11 h-11 icon-chip">
                   <s.icon className="w-5 h-5" aria-hidden />
                 </span>
-                <span className="text-4xl font-extrabold gradient-text opacity-60">{i + 1}</span>
+                <span className="text-4xl font-extrabold gradient-text">{i + 1}</span>
               </div>
               <h3 className="font-bold">{s.h}</h3>
               <p className="text-muted text-sm mt-2 leading-relaxed">{s.p}</p>

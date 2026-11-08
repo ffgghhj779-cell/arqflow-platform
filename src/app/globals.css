@@ -53,7 +53,7 @@
 
   /* Text */
   --fg: #23404f;
-  --fg-muted: #5f7280;
+  --fg-muted: #46596a;
   --fg-cream: #0b6b5d;
 
   /* Hairlines */
@@ -61,10 +61,10 @@
   --border-strong: rgba(14, 140, 120, 0.35);
 
   /* Accents */
-  --accent: #0e8c78;
-  --accent-rgb: 14, 140, 120;
+  --accent: #0b7d6b;
+  --accent-rgb: 11, 125, 107;
   --accent-strong: #23404f;
-  --accent-mid: #3a8f9a;
+  --accent-mid: #2a7a82;
   --accent-soft: rgba(var(--accent-rgb), 0.1);
   --accent-fg: #f8fbf9;
   --gold: #b8935a;
@@ -88,7 +88,7 @@
   --gold-glow: rgba(184, 147, 90, 0.3);
 
   /* ── Gradient tokens ── */
-  --gradient-aurora: linear-gradient(135deg, #2b6f77 0%, #3a8f9a 55%, #12a08a 100%);
+  --gradient-aurora: linear-gradient(135deg, #1f5a62 0%, #2a7a82 55%, #0e8c78 100%);
   --gradient-mesh-1: radial-gradient(ellipse at 20% 50%, rgba(18,160,138,0.12) 0%, transparent 60%);
   --gradient-mesh-2: radial-gradient(ellipse at 80% 20%, rgba(184,147,90,0.10) 0%, transparent 50%);
   --gradient-mesh-3: radial-gradient(ellipse at 60% 80%, rgba(15,76,92,0.07) 0%, transparent 55%);
@@ -114,7 +114,7 @@
 
   /* Text */
   --fg: #f3f1ec;
-  --fg-muted: #9fb0bf;
+  --fg-muted: #b9c8d3;
   --fg-cream: #7fdcc8;
 
   /* Hairlines */
@@ -733,14 +733,14 @@ select.input-base option { background: var(--bg); color: var(--fg); }
 
 /* ===== Gradient Text ===== */
 .gradient-text {
-  background: linear-gradient(135deg, #2b6f77 0%, var(--accent) 70%, #2b6f77 110%);
+  background: linear-gradient(135deg, #1f5a62 0%, var(--accent) 70%, #1f5a62 110%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .gradient-text-dark {
-  background: linear-gradient(135deg, #2b6f77 0%, var(--accent) 75%, #2b6f77 110%);
+  background: linear-gradient(135deg, #1f5a62 0%, var(--accent) 75%, #1f5a62 110%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

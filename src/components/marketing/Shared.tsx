@@ -268,7 +268,7 @@ export function PlanCard({
         <h3 className={cn("text-xl font-extrabold mt-2", isHighlighted ? "text-white" : "text-app")}>
           {pick(plan.name)}
         </h3>
-        <p className={cn("text-sm mt-2 leading-relaxed min-h-10", isHighlighted ? "text-[rgba(255,255,255,0.65)]" : "text-muted")}>
+        <p className={cn("text-sm mt-2 leading-relaxed min-h-10", isHighlighted ? "text-white/90" : "text-muted")}>
           {pick(plan.tagline)}
         </p>
 
@@ -278,11 +278,11 @@ export function PlanCard({
             <span className={cn("text-4xl sm:text-5xl font-extrabold font-display", isHighlighted ? "text-white" : "gradient-text-aurora")}>
               {formatEGP(plan.monthlyFee, lang, plan.currency)}
             </span>
-            <span className={cn("text-sm", isHighlighted ? "text-[rgba(255,255,255,0.5)]" : "text-muted")}>
+            <span className={cn("text-sm", isHighlighted ? "text-white/80" : "text-muted")}>
               {t.monthly}
             </span>
           </div>
-          <p className={cn("text-xs mt-2", isHighlighted ? "text-[rgba(255,255,255,0.4)]" : "text-muted")}>
+          <p className={cn("text-xs mt-2", isHighlighted ? "text-white/80" : "text-muted")}>
             + {formatEGP(plan.setupFee, lang, plan.currency)} {t.setup}
           </p>
           <p className={cn("text-xs mt-1 font-semibold", isHighlighted ? "text-[var(--accent)]" : "text-accent")}>
@@ -305,7 +305,7 @@ export function PlanCard({
                 className={cn("w-4 h-4 shrink-0 mt-0.5", isHighlighted ? "text-[var(--accent)]" : "text-success")}
                 aria-hidden
               />
-              <span className={isHighlighted ? "text-[rgba(255,255,255,0.8)]" : detailed ? "" : "text-muted"}>
+              <span className={isHighlighted ? "text-white/92" : detailed ? "" : "text-muted"}>
                 {f}
               </span>
             </motion.li>
@@ -418,12 +418,12 @@ export function CTABanner({
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="gradient-text-aurora">{title ?? t.title}</span>
+            <span className="text-white">{title ?? t.title}</span>
           </motion.h2>
 
           {/* Subtitle */}
           <motion.p
-            className="mt-5 text-[rgba(255,255,255,0.65)] text-base sm:text-lg leading-relaxed max-w-2xl mx-auto"
+            className="mt-5 text-white/90 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -449,7 +449,7 @@ export function CTABanner({
             </Link>
             <Link
               href="/onboarding?plan=free_trial"
-              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-lg font-bold text-sm border border-[rgba(255,255,255,0.2)] text-white hover:border-[rgba(255,255,255,0.5)] hover:bg-[rgba(255,255,255,0.08)] transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-lg font-bold text-sm border border-white/50 text-white hover:border-white/80 hover:bg-[rgba(255,255,255,0.08)] transition-all duration-300"
             >
               <MessageCircle className="w-4 h-4" aria-hidden />
               {t.demo}

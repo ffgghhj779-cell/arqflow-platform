@@ -229,14 +229,14 @@ export function InteractivePlayground() {
             <div className="flex items-center gap-1">
               <button
                 onClick={() => setSoundMuted((m) => !m)}
-                className="btn-ghost !p-2 text-white/70 hover:text-white"
+                className="btn-ghost !p-2 text-white/90 hover:text-white"
                 title={soundMuted ? t.soundOn : t.soundOff}
               >
                 {soundMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4 text-teal-400" />}
               </button>
               <button
                 onClick={handleReset}
-                className="btn-ghost !p-2 text-white/70 hover:text-white"
+                className="btn-ghost !p-2 text-white/90 hover:text-white"
                 title={t.reset}
               >
                 <RefreshCw className="w-4 h-4" />
@@ -274,7 +274,7 @@ export function InteractivePlayground() {
                     )}
                   >
                     <p className="whitespace-pre-wrap">{m.text}</p>
-                    <div className={cn("flex items-center gap-1 text-[10px] mt-1 justify-end", isUser ? "text-teal-200/80" : "text-muted")}>
+                    <div className={cn("flex items-center gap-1 text-[10px] mt-1 justify-end", isUser ? "text-teal-100" : "text-muted")}>
                       <span>{m.time}</span>
                       {isUser && <CheckCheck className="w-3.5 h-3.5 text-teal-300" />}
                     </div>

@@ -119,15 +119,15 @@ export function VoiceNoteSimulator() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white">{t.customerName}</p>
-                    <p className="text-[11px] text-white/75 flex items-center gap-1">
-                      <Mic className="w-3 h-3 text-teal-400" />
+                    <p className="text-[11px] text-white/90 flex items-center gap-1">
+                      <Mic className="w-3 h-3 text-teal-200" />
                       <span>{lang === "ar" ? "رسالة صوتية (واتساب)" : "WhatsApp Voice Note"}</span>
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <span className="text-[11px] font-mono text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded-full border border-teal-500/20">
+                  <span className="text-[11px] font-mono text-teal-200 bg-teal-500/10 px-2.5 py-1 rounded-full border border-teal-500/20">
                     {t.voiceDuration}
                   </span>
                 </div>
@@ -173,11 +173,11 @@ export function VoiceNoteSimulator() {
                 </div>
 
                 <div className="shrink-0 flex items-center gap-1">
-                  <CheckCheck className="w-4 h-4 text-sky-400" />
+                  <CheckCheck className="w-4 h-4 text-sky-200" />
                 </div>
               </div>
 
-              <p className="text-[11px] text-white/75 text-center mt-2.5">
+              <p className="text-[11px] text-white/90 text-center mt-2.5">
                 {t.playHint}
               </p>
 
@@ -192,7 +192,7 @@ export function VoiceNoteSimulator() {
                   >
                     {/* Live Transcription Box */}
                     <div className="bg-[#34777f] border border-teal-500/30 rounded-2xl p-4">
-                      <p className="text-xs font-bold text-teal-300 flex items-center gap-1.5 mb-1.5">
+                      <p className="text-xs font-bold text-teal-100 flex items-center gap-1.5 mb-1.5">
                         <Sparkles className="w-3.5 h-3.5" />
                         {t.transcriptionLabel}
                       </p>
@@ -204,15 +204,15 @@ export function VoiceNoteSimulator() {
                     {/* AI Insights 3-col Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                       <div className="bg-[#245f67] border border-white/10 rounded-xl p-3">
-                        <p className="text-[10px] text-white/75 mb-0.5">{t.dialectLabel}</p>
-                        <p className="text-xs font-bold text-emerald-400">{t.dialectVal}</p>
+                        <p className="text-[10px] text-white/90 mb-0.5">{t.dialectLabel}</p>
+                        <p className="text-xs font-bold text-emerald-200">{t.dialectVal}</p>
                       </div>
                       <div className="bg-[#245f67] border border-white/10 rounded-xl p-3">
-                        <p className="text-[10px] text-white/75 mb-0.5">{t.intentLabel}</p>
-                        <p className="text-xs font-bold text-sky-400">{t.intentVal}</p>
+                        <p className="text-[10px] text-white/90 mb-0.5">{t.intentLabel}</p>
+                        <p className="text-xs font-bold text-sky-200">{t.intentVal}</p>
                       </div>
                       <div className="bg-[#245f67] border border-white/10 rounded-xl p-3">
-                        <p className="text-[10px] text-white/75 mb-0.5">{t.speedLabel}</p>
+                        <p className="text-[10px] text-white/90 mb-0.5">{t.speedLabel}</p>
                         <p className="text-xs font-bold text-amber-400 flex items-center gap-1">
                           <Zap className="w-3 h-3 text-amber-400" />
                           {t.speedVal}
@@ -226,7 +226,7 @@ export function VoiceNoteSimulator() {
                         <div className="w-6 h-6 rounded-full bg-teal-400 text-[#fbfaf7] flex items-center justify-center font-bold text-xs">
                           <Bot className="w-3.5 h-3.5" />
                         </div>
-                        <span className="text-xs font-bold text-teal-300">{t.botReplyTitle}</span>
+                        <span className="text-xs font-bold text-teal-100">{t.botReplyTitle}</span>
                       </div>
                       <p className="text-sm text-slate-100 leading-relaxed font-medium">
                         {t.botReply}

@@ -1044,7 +1044,7 @@ export default function WhatsAppClient({ businessId, initialInstance }: Props) {
           {/* QR Image Box */}
           <div className="relative mx-auto w-64 h-64 rounded-2xl overflow-hidden bg-white p-3 shadow-md flex items-center justify-center border border-gray-200">
             {qrLoading ? (
-              <div className="flex flex-col items-center gap-2 text-gray-500">
+              <div className="flex flex-col items-center gap-2 text-gray-600">
                 <Spinner className="w-8 h-8 text-accent" />
                 <span className="text-xs">جاري جلب رمز الاستجابة السريعة...</span>
               </div>

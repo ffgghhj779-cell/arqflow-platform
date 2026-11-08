@@ -65,7 +65,7 @@ export default function SimulatorClient({ business }: { business: any }) {
           </div>
           <div>
             <h2 className="text-xl font-bold text-slate-900 dark:text-white">بوت {business.business_name}</h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400">نسخة تجريبية للمحاكاة (Simulator)</p>
+            <p className="text-sm text-slate-600 dark:text-slate-400">نسخة تجريبية للمحاكاة (Simulator)</p>
           </div>
         </div>
       </div>
@@ -109,7 +109,7 @@ export default function SimulatorClient({ business }: { business: any }) {
             onChange={(e) => setInput(e.target.value)}
             placeholder="اكتب رسالة لتجربة البوت..."
             disabled={loading}
-            className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full py-4 px-6 pe-16 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal/50 transition-all text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/40 shadow-sm dark:shadow-none"
+            className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full py-4 px-6 pe-16 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal/50 transition-all text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/80 shadow-sm dark:shadow-none"
             dir="rtl"
           />
           <button
