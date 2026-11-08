@@ -246,11 +246,12 @@ export function InteractivePlayground() {
           {/* Chat Messages Body */}
           <div
             ref={scrollRef}
-            className="h-[320px] sm:h-[360px] overflow-y-auto p-4 space-y-3 relative"
+            className="h-[280px] sm:h-[360px] overflow-y-auto p-3 sm:p-4 space-y-3 relative overscroll-contain"
             style={{
               backgroundColor: "var(--bg-solid)",
               backgroundImage: "radial-gradient(rgba(var(--accent-rgb), 0.04) 1px, transparent 1px)",
               backgroundSize: "24px 24px",
+              WebkitOverflowScrolling: "touch",
             }}
           >
             {messages.map((m) => {
@@ -265,7 +266,7 @@ export function InteractivePlayground() {
                 >
                   <div
                     className={cn(
-                      "max-w-[85%] sm:max-w-[75%] rounded-2xl px-4 py-2.5 text-sm shadow-sm relative leading-relaxed",
+                      "max-w-[88%] sm:max-w-[75%] rounded-2xl px-3.5 py-2 sm:px-4 sm:py-2.5 text-xs sm:text-sm shadow-sm relative leading-relaxed",
                       isUser
                         ? "bg-[#0f766e] text-white rounded-br-xs"
                         : "bg-[var(--bg-elev)] text-app border border-app rounded-bl-xs"
@@ -290,7 +291,7 @@ export function InteractivePlayground() {
                   exit={{ opacity: 0, scale: 0.9 }}
                   className="flex justify-start"
                 >
-                  <div className="bg-[var(--bg-elev)] border border-app rounded-2xl rounded-bl-xs px-4 py-3 flex items-center gap-1.5 shadow-sm">
+                  <div className="bg-[var(--bg-elev)] border border-app rounded-2xl rounded-bl-xs px-3.5 py-2.5 sm:px-4 sm:py-3 flex items-center gap-1.5 shadow-sm">
                     <span className="w-2 h-2 rounded-full bg-accent animate-bounce [animation-delay:-0.3s]" />
                     <span className="w-2 h-2 rounded-full bg-accent animate-bounce [animation-delay:-0.15s]" />
                     <span className="w-2 h-2 rounded-full bg-accent animate-bounce" />
@@ -301,8 +302,11 @@ export function InteractivePlayground() {
           </div>
 
           {/* Quick Preset Buttons */}
-          <div className="p-3 bg-[var(--bg-elev)] border-t border-app overflow-x-auto no-scrollbar">
-            <div className="flex items-center gap-2">
+          <div
+            className="p-2.5 sm:p-3 bg-[var(--bg-elev)] border-t border-app overflow-x-auto no-scrollbar overscroll-x-contain touch-pan-x"
+            style={{ WebkitOverflowScrolling: "touch" }}
+          >
+            <div className="flex items-center gap-1.5 sm:gap-2">
               <span className="text-[11px] font-bold text-muted shrink-0 flex items-center gap-1">
                 <Sparkles className="w-3 h-3 text-accent" />
                 {lang === "ar" ? "جرّب تسأل:" : "Try asking:"}
@@ -312,7 +316,7 @@ export function InteractivePlayground() {
                   key={idx}
                   onClick={() => handleSend(p.label)}
                   disabled={isTyping}
-                  className="shrink-0 px-3 py-1.5 rounded-full text-xs font-semibold bg-solid hover:bg-[rgba(var(--accent-rgb),0.1)] hover:text-accent border border-app transition-all duration-150 disabled:opacity-50"
+                  className="shrink-0 px-3 py-1.5 rounded-full text-xs font-semibold bg-solid hover:bg-[rgba(var(--accent-rgb),0.1)] hover:text-accent border border-app transition-all duration-150 disabled:opacity-50 touch-manipulation"
                 >
                   {p.label}
                 </button>
@@ -326,7 +330,7 @@ export function InteractivePlayground() {
               e.preventDefault();
               handleSend();
             }}
-            className="p-3 bg-[var(--bg)] border-t border-app flex items-center gap-2"
+            className="p-2.5 sm:p-3 bg-[var(--bg)] border-t border-app flex items-center gap-2"
           >
             <input
               type="text"
@@ -334,12 +338,12 @@ export function InteractivePlayground() {
               onChange={(e) => setInputText(e.target.value)}
               placeholder={t.placeholder}
               disabled={isTyping}
-              className="flex-1 bg-solid border border-app rounded-xl px-4 py-2.5 text-sm text-app placeholder:text-muted focus:outline-none focus:border-accent transition-colors"
+              className="flex-1 bg-solid border border-app rounded-xl px-3.5 py-2.5 sm:px-4 text-base sm:text-sm text-app placeholder:text-muted focus:outline-none focus:border-accent transition-colors"
             />
             <button
               type="submit"
               disabled={!inputText.trim() || isTyping}
-              className="w-10 h-10 rounded-xl bg-[var(--accent)] text-[#050b14] flex items-center justify-center shrink-0 disabled:opacity-40 hover:bg-white transition-all shadow-md"
+              className="w-10 h-10 rounded-xl bg-[var(--accent)] text-[#050b14] flex items-center justify-center shrink-0 disabled:opacity-40 hover:bg-white transition-all shadow-md touch-manipulation"
               aria-label="Send"
             >
               <Send className={cn("w-4 h-4", dir === "rtl" && "rotate-180")} />

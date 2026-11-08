@@ -362,10 +362,12 @@ function PricingFaq() {
 }
 
 function PlanComparisonTable() {
+  const { lang } = useLang();
   const t = useT({
     ar: {
       badge: "مقارنة دقيقة",
       title: "مقارنة المزايا بين كافة الباقات",
+      swipeHint: "اسحب أفقياً لمقارنة كافة الباقات ⟵",
       feature: "الميزة أو الخاصية",
       starter: "الأساسية (Starter)",
       business: "الشركات (Business)",
@@ -386,6 +388,7 @@ function PlanComparisonTable() {
     en: {
       badge: "Feature Matrix",
       title: "Detailed Plan Comparison",
+      swipeHint: "Swipe horizontally to compare all plans ⟶",
       feature: "Feature",
       starter: "Starter",
       business: "Business (Popular)",
@@ -408,14 +411,26 @@ function PlanComparisonTable() {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
       <SectionHeading badge={t.badge} title={t.title} />
-      <div className="mt-12 overflow-x-auto">
-        <div className="min-w-[640px] glass-strong card-elevated rounded-2xl border border-app overflow-hidden">
+
+      {/* Mobile swipe hint */}
+      <div className="flex sm:hidden items-center justify-center gap-1.5 text-xs text-muted mt-8 mb-2">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent animate-ping" />
+        <span className="font-medium">{t.swipeHint}</span>
+      </div>
+
+      <div
+        className="mt-4 sm:mt-12 overflow-x-auto overscroll-x-contain touch-pan-x -mx-4 sm:mx-0 px-4 sm:px-0"
+        style={{ WebkitOverflowScrolling: "touch" }}
+      >
+        <div className="min-w-[620px] glass-strong card-elevated rounded-2xl border border-app overflow-hidden">
           <table className="w-full text-start text-sm">
             <thead>
-              <tr className="border-b border-app bg-solid/50">
-                <th className="py-4 px-6 font-bold text-app text-start w-2/5">{t.feature}</th>
+              <tr className="border-b border-app bg-solid/60">
+                <th className="py-4 px-4 sm:px-6 font-bold text-app text-start w-2/5 sticky start-0 bg-[var(--bg)] sm:bg-transparent z-10 border-e sm:border-e-0 border-app/40">
+                  {t.feature}
+                </th>
                 <th className="py-4 px-4 font-bold text-muted text-center w-1/5">{t.starter}</th>
-                <th className="py-4 px-4 font-bold text-accent text-center w-1/5 bg-[rgba(var(--accent-rgb),0.06)]">
+                <th className="py-4 px-4 font-bold text-accent text-center w-1/5 bg-[rgba(var(--accent-rgb),0.08)]">
                   {t.business} ✦
                 </th>
                 <th className="py-4 px-4 font-bold text-muted text-center w-1/5">{t.enterprise}</th>
@@ -424,12 +439,14 @@ function PlanComparisonTable() {
             <tbody className="divide-y divide-app">
               {t.rows.map((row, idx) => (
                 <tr key={idx} className="hover:bg-solid/30 transition-colors">
-                  <td className="py-3.5 px-6 font-medium text-app">{row.f}</td>
-                  <td className="py-3.5 px-4 text-center text-muted font-mono">{row.s}</td>
-                  <td className="py-3.5 px-4 text-center font-bold text-accent font-mono bg-[rgba(var(--accent-rgb),0.03)]">
+                  <td className="py-3.5 px-4 sm:px-6 font-medium text-app sticky start-0 bg-[var(--bg)] sm:bg-transparent z-10 border-e sm:border-e-0 border-app/40 text-xs sm:text-sm">
+                    {row.f}
+                  </td>
+                  <td className="py-3.5 px-4 text-center text-muted font-mono text-xs sm:text-sm">{row.s}</td>
+                  <td className="py-3.5 px-4 text-center font-bold text-accent font-mono text-xs sm:text-sm bg-[rgba(var(--accent-rgb),0.03)]">
                     {row.b}
                   </td>
-                  <td className="py-3.5 px-4 text-center text-muted font-mono">{row.e}</td>
+                  <td className="py-3.5 px-4 text-center text-muted font-mono text-xs sm:text-sm">{row.e}</td>
                 </tr>
               ))}
             </tbody>

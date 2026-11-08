@@ -115,7 +115,7 @@ function Hero() {
           transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-center w-full"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.08] text-app">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.12] sm:leading-[1.08] text-app">
             {/* Line 1 — gradient */}
             <span className="gradient-text-aurora block pb-1">{t.h1a}</span>
             {/* Line 2 — solid */}

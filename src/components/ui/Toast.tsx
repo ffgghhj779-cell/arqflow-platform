@@ -176,7 +176,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
       {children}
       {/* Toast container — bottom-right (flipped for RTL via CSS end-4) */}
       <div
-        className="fixed bottom-4 end-4 z-[9990] flex flex-col gap-2.5 w-[340px] max-w-[calc(100vw-2rem)] pointer-events-none"
+        className="fixed bottom-5 end-4 z-[9990] flex flex-col gap-2.5 w-[340px] max-w-[calc(100vw-2rem)] pointer-events-none pb-[env(safe-area-inset-bottom)]"
         aria-label="Notifications"
       >
         <AnimatePresence mode="popLayout" initial={false}>

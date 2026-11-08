@@ -194,7 +194,7 @@ export function PlanCard({
 
         {/* Popular badge */}
         {isHighlighted && (
-          <span className="badge-premium absolute -top-px start-1/2 -translate-x-1/2 rtl:translate-x-1/2 whitespace-nowrap shadow-lg z-10">
+          <span className="badge-premium absolute -top-px left-1/2 -translate-x-1/2 whitespace-nowrap shadow-lg z-10">
             {t.popular}
           </span>
         )}

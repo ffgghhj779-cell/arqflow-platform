@@ -118,8 +118,13 @@ export function TiltCard({
   intensity?: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const [isTouch, setIsTouch] = useState(false);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
+
+  useEffect(() => {
+    setIsTouch(window.matchMedia("(pointer: coarse)").matches);
+  }, []);
 
   const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [intensity, -intensity]), {
     stiffness: 300, damping: 30,
@@ -129,6 +134,7 @@ export function TiltCard({
   });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (isTouch) return;
     const rect = ref.current?.getBoundingClientRect();
     if (!rect) return;
     x.set((e.clientX - rect.left) / rect.width - 0.5);
@@ -139,6 +145,10 @@ export function TiltCard({
     x.set(0);
     y.set(0);
   };
+
+  if (isTouch) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <motion.div
