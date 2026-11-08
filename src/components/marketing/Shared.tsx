@@ -8,12 +8,12 @@ import { useLang, useT } from "@/lib/i18n";
 import { cn, formatEGP } from "@/lib/utils";
 import type { Plan } from "@/lib/plans";
 
-/* ---------- Scroll reveal wrapper (Ultra-Smooth 120Hz Fast & Silky) ---------- */
+/* ---------- Scroll reveal wrapper (Ultra-Smooth, Zero-Blur, 120Hz Hardware-Accelerated) ---------- */
 export function Reveal({
   children,
   delay = 0,
   direction = "up",
-  distance = 20,
+  distance = 18,
   duration,
   className,
 }: {
@@ -33,9 +33,9 @@ export function Reveal({
     );
   }, []);
 
-  const d = isTouch ? Math.min(distance, 12) : distance;
-  const dur = duration ?? (isTouch ? 0.35 : 0.48);
-  const del = isTouch ? Math.min(delay, 0.04) : delay;
+  const d = isTouch ? Math.min(distance, 10) : distance;
+  const dur = duration ?? (isTouch ? 0.32 : 0.45);
+  const del = isTouch ? Math.min(delay, 0.03) : delay;
 
   const getInitial = () => {
     switch (direction) {
@@ -44,32 +44,27 @@ export function Reveal({
           opacity: 0,
           y: d,
           scale: isTouch ? 1 : 0.99,
-          filter: isTouch ? undefined : "blur(3px)",
         };
       case "down":
         return {
           opacity: 0,
           y: -d,
           scale: isTouch ? 1 : 0.99,
-          filter: isTouch ? undefined : "blur(3px)",
         };
       case "left":
         return {
           opacity: 0,
           x: d,
-          filter: isTouch ? undefined : "blur(3px)",
         };
       case "right":
         return {
           opacity: 0,
           x: -d,
-          filter: isTouch ? undefined : "blur(3px)",
         };
       case "zoom":
         return {
           opacity: 0,
-          scale: 0.96,
-          filter: isTouch ? undefined : "blur(3px)",
+          scale: 0.98,
         };
       case "fade":
       default:
@@ -87,9 +82,8 @@ export function Reveal({
         y: 0,
         x: 0,
         scale: 1,
-        filter: isTouch ? undefined : "blur(0px)",
       }}
-      viewport={{ once: true, margin: isTouch ? "30px 0px -10px 0px" : "-20px" }}
+      viewport={{ once: true, margin: isTouch ? "40px 0px 0px 0px" : "-10px" }}
       transition={{
         duration: dur,
         delay: del,

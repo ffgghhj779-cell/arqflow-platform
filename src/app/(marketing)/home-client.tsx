@@ -23,7 +23,6 @@ import { BentoGrid } from "@/components/marketing/BentoGrid";
 import { IndustryMarquee } from "@/components/marketing/IndustryMarquee";
 import { ROICalculator } from "@/components/marketing/ROICalculator";
 import { VoiceNoteSimulator } from "@/components/marketing/VoiceNoteSimulator";
-import { LiveActivityToast } from "@/components/marketing/LiveActivityToast";
 
 /* ================================================================
    HERO
@@ -675,7 +674,6 @@ export default function HomeClient({ plans }: { plans?: Plan[] }) {
       <PricingPreview plans={plans} />
       <HomeFaq />
       <CTABanner />
-      <LiveActivityToast />
     </>
   );
 }
