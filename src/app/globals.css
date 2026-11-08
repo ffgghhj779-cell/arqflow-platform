@@ -139,6 +139,13 @@ html {
   overflow-x: clip;
 }
 
+/* Restore 100% native 120Hz kinetic inertia scrolling on mobile/touch screens */
+@media (pointer: coarse) {
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
 html, body {
   background: var(--bg) !important;
   color: var(--fg) !important;

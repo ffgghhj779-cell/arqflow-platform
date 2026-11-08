@@ -199,10 +199,10 @@ export function InteractivePlayground() {
 
         {/* WhatsApp Mock Simulator Container */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 32 }}
+          initial={{ opacity: 0, scale: 0.98, y: 16 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true, margin: "30px 0px" }}
+          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           className="glass-strong card-elevated rounded-2xl sm:rounded-3xl overflow-hidden border border-app shadow-2xl max-w-3xl mx-auto"
         >
           {/* WhatsApp Header */}

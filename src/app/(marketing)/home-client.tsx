@@ -361,7 +361,7 @@ function Features() {
 
         <div className="mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {t.items.map((f, i) => (
-            <Reveal key={f.h} delay={i * 0.07}>
+            <Reveal key={f.h} delay={i * 0.03}>
               <motion.div
                 className={cn(
                   "card p-5 sm:p-7 h-full bg-elev group relative overflow-hidden",
@@ -451,7 +451,7 @@ function HowItWorks() {
 
           <div className="space-y-8 sm:space-y-10">
             {t.steps.map((s, i) => (
-              <Reveal key={s.h} delay={i * 0.12}>
+              <Reveal key={s.h} delay={i * 0.04}>
                 <div className="flex gap-5 sm:gap-7 group">
                   {/* Step number circle */}
                   <div className="relative shrink-0 z-10">
@@ -541,7 +541,7 @@ function Industries() {
         <SectionHeading badge={t.badge} title={t.title} />
         <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-9 gap-2 sm:gap-3 mt-10 sm:mt-14">
           {t.items.map((it, i) => (
-            <Reveal key={it.l} delay={i * 0.05}>
+            <Reveal key={it.l} delay={i * 0.02}>
               <motion.div
                 className="card p-3 sm:p-5 text-center h-full flex flex-col items-center gap-2 sm:gap-3 bg-elev group"
                 whileHover={{

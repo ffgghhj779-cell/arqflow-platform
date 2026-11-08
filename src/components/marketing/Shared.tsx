@@ -8,12 +8,12 @@ import { useLang, useT } from "@/lib/i18n";
 import { cn, formatEGP } from "@/lib/utils";
 import type { Plan } from "@/lib/plans";
 
-/* ---------- Scroll reveal wrapper (Apple / Linear Grade) ---------- */
+/* ---------- Scroll reveal wrapper (Ultra-Smooth 120Hz Fast & Silky) ---------- */
 export function Reveal({
   children,
   delay = 0,
   direction = "up",
-  distance = 28,
+  distance = 20,
   duration,
   className,
 }: {
@@ -27,42 +27,49 @@ export function Reveal({
   const [isTouch, setIsTouch] = useState(false);
 
   useEffect(() => {
-    setIsTouch(window.matchMedia("(pointer: coarse)").matches);
+    setIsTouch(
+      typeof window !== "undefined" &&
+      (window.innerWidth < 768 || window.matchMedia("(pointer: coarse)").matches)
+    );
   }, []);
+
+  const d = isTouch ? Math.min(distance, 12) : distance;
+  const dur = duration ?? (isTouch ? 0.35 : 0.48);
+  const del = isTouch ? Math.min(delay, 0.04) : delay;
 
   const getInitial = () => {
     switch (direction) {
       case "up":
         return {
           opacity: 0,
-          y: distance,
-          scale: isTouch ? 1 : 0.98,
-          filter: isTouch ? "none" : "blur(6px)",
+          y: d,
+          scale: isTouch ? 1 : 0.99,
+          filter: isTouch ? undefined : "blur(3px)",
         };
       case "down":
         return {
           opacity: 0,
-          y: -distance,
-          scale: isTouch ? 1 : 0.98,
-          filter: isTouch ? "none" : "blur(6px)",
+          y: -d,
+          scale: isTouch ? 1 : 0.99,
+          filter: isTouch ? undefined : "blur(3px)",
         };
       case "left":
         return {
           opacity: 0,
-          x: distance,
-          filter: isTouch ? "none" : "blur(6px)",
+          x: d,
+          filter: isTouch ? undefined : "blur(3px)",
         };
       case "right":
         return {
           opacity: 0,
-          x: -distance,
-          filter: isTouch ? "none" : "blur(6px)",
+          x: -d,
+          filter: isTouch ? undefined : "blur(3px)",
         };
       case "zoom":
         return {
           opacity: 0,
-          scale: 0.94,
-          filter: isTouch ? "none" : "blur(6px)",
+          scale: 0.96,
+          filter: isTouch ? undefined : "blur(3px)",
         };
       case "fade":
       default:
@@ -80,15 +87,14 @@ export function Reveal({
         y: 0,
         x: 0,
         scale: 1,
-        filter: "blur(0px)",
+        filter: isTouch ? undefined : "blur(0px)",
       }}
-      viewport={{ once: true, margin: "-45px" }}
+      viewport={{ once: true, margin: isTouch ? "30px 0px -10px 0px" : "-20px" }}
       transition={{
-        duration: duration ?? (isTouch ? 0.55 : 0.75),
-        delay,
-        ease: [0.16, 1, 0.3, 1],
+        duration: dur,
+        delay: del,
+        ease: [0.22, 1, 0.36, 1],
       }}
-      style={{ willChange: "transform, opacity, filter" }}
       className={className}
     >
       {children}

@@ -14,6 +14,11 @@ export default function InteractiveGridBackground() {
   }, [resolvedTheme]);
 
   useEffect(() => {
+    // Disable heavy canvas math loop on mobile / touch devices for native 120Hz silky smooth scroll
+    if (typeof window !== "undefined" && (window.innerWidth < 768 || window.matchMedia("(pointer: coarse)").matches)) {
+      return;
+    }
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 

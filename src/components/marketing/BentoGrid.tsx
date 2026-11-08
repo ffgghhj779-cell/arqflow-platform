@@ -84,10 +84,10 @@ export function BentoGrid() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           {/* Card 1: Large (Span 2 cols) */}
           <motion.div
-            initial={{ opacity: 0, y: 32, scale: 0.98 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "30px 0px" }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="md:col-span-2"
           >
             <TiltCard className="h-full">
@@ -124,10 +124,10 @@ export function BentoGrid() {
 
           {/* Card 2: CRM & Sync */}
           <motion.div
-            initial={{ opacity: 0, y: 32, scale: 0.98 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "30px 0px" }}
+            transition={{ duration: 0.4, delay: 0.04, ease: [0.22, 1, 0.36, 1] }}
           >
             <TiltCard className="h-full">
               <div className="glass-strong card-elevated h-full p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-app relative overflow-hidden flex flex-col justify-between group">
@@ -153,10 +153,10 @@ export function BentoGrid() {
 
           {/* Card 3: Token Wallet */}
           <motion.div
-            initial={{ opacity: 0, y: 32, scale: 0.98 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.7, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "30px 0px" }}
+            transition={{ duration: 0.4, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
           >
             <TiltCard className="h-full">
               <div className="glass-strong card-elevated h-full p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-app relative overflow-hidden flex flex-col justify-between group">
@@ -187,10 +187,10 @@ export function BentoGrid() {
 
           {/* Card 4: Human Escalation */}
           <motion.div
-            initial={{ opacity: 0, y: 32, scale: 0.98 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.7, delay: 0.26, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "30px 0px" }}
+            transition={{ duration: 0.4, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
           >
             <TiltCard className="h-full">
               <div className="glass-strong card-elevated h-full p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-app relative overflow-hidden flex flex-col justify-between group">
@@ -216,10 +216,10 @@ export function BentoGrid() {
 
           {/* Card 5: Analytics */}
           <motion.div
-            initial={{ opacity: 0, y: 32, scale: 0.98 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.7, delay: 0.34, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "30px 0px" }}
+            transition={{ duration: 0.4, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
           >
             <TiltCard className="h-full">
               <div className="glass-strong card-elevated h-full p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-app relative overflow-hidden flex flex-col justify-between group">
