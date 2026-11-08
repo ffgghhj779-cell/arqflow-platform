@@ -3,6 +3,7 @@ import { LangProvider } from "@/lib/i18n";
 import CustomCursor from "@/components/ui/CustomCursor";
 import InteractiveGridBackground from "@/components/ui/InteractiveGridBackground";
 import { WhatsAppFloatingButton } from "@/components/ui/WhatsAppFloatingButton";
+import { ScrollProgressBar } from "@/components/ui/ScrollProgress";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
@@ -55,6 +56,7 @@ export default function RootLayout({
           <InteractiveGridBackground />
           <CustomCursor />
           <LangProvider>
+            <ScrollProgressBar />
             {children}
             <WhatsAppFloatingButton />
           </LangProvider>

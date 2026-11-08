@@ -1,29 +1,94 @@
 "use client";
 
 import Link from "next/link";
-import { useState, type ReactNode } from "react";
+import { useState, useEffect, type ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ArrowLeft, ArrowRight, Check, MessageCircle } from "lucide-react";
 import { useLang, useT } from "@/lib/i18n";
 import { cn, formatEGP } from "@/lib/utils";
 import type { Plan } from "@/lib/plans";
 
-/* ---------- Scroll reveal wrapper ---------- */
+/* ---------- Scroll reveal wrapper (Apple / Linear Grade) ---------- */
 export function Reveal({
   children,
   delay = 0,
+  direction = "up",
+  distance = 28,
+  duration,
   className,
 }: {
   children: ReactNode;
   delay?: number;
+  direction?: "up" | "down" | "left" | "right" | "zoom" | "fade";
+  distance?: number;
+  duration?: number;
   className?: string;
 }) {
+  const [isTouch, setIsTouch] = useState(false);
+
+  useEffect(() => {
+    setIsTouch(window.matchMedia("(pointer: coarse)").matches);
+  }, []);
+
+  const getInitial = () => {
+    switch (direction) {
+      case "up":
+        return {
+          opacity: 0,
+          y: distance,
+          scale: isTouch ? 1 : 0.98,
+          filter: isTouch ? "none" : "blur(6px)",
+        };
+      case "down":
+        return {
+          opacity: 0,
+          y: -distance,
+          scale: isTouch ? 1 : 0.98,
+          filter: isTouch ? "none" : "blur(6px)",
+        };
+      case "left":
+        return {
+          opacity: 0,
+          x: distance,
+          filter: isTouch ? "none" : "blur(6px)",
+        };
+      case "right":
+        return {
+          opacity: 0,
+          x: -distance,
+          filter: isTouch ? "none" : "blur(6px)",
+        };
+      case "zoom":
+        return {
+          opacity: 0,
+          scale: 0.94,
+          filter: isTouch ? "none" : "blur(6px)",
+        };
+      case "fade":
+      default:
+        return {
+          opacity: 0,
+        };
+    }
+  };
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
+      initial={getInitial()}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        x: 0,
+        scale: 1,
+        filter: "blur(0px)",
+      }}
+      viewport={{ once: true, margin: "-45px" }}
+      transition={{
+        duration: duration ?? (isTouch ? 0.55 : 0.75),
+        delay,
+        ease: [0.16, 1, 0.3, 1],
+      }}
+      style={{ willChange: "transform, opacity, filter" }}
       className={className}
     >
       {children}

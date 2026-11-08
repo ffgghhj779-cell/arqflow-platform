@@ -199,11 +199,11 @@ export function InteractivePlayground() {
 
         {/* WhatsApp Mock Simulator Container */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.96, y: 24 }}
+          initial={{ opacity: 0, scale: 0.95, y: 32 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="glass-strong card-elevated rounded-3xl overflow-hidden border border-app shadow-2xl max-w-3xl mx-auto"
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+          className="glass-strong card-elevated rounded-2xl sm:rounded-3xl overflow-hidden border border-app shadow-2xl max-w-3xl mx-auto"
         >
           {/* WhatsApp Header */}
           <div className="bg-[#0b141a] text-white px-4 py-3.5 flex items-center justify-between border-b border-white/10">
