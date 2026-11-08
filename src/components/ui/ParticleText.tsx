@@ -106,6 +106,7 @@ export default function ParticleText({
   const particles    = useRef<Particle[]>([]);
   const animStart    = useRef<number | null>(null);
   const rafId        = useRef<number>(0);
+  const isLoopRunning = useRef<boolean>(false);
   const mousePos     = useRef<{ x: number; y: number; active: boolean }>({ x: -3000, y: -3000, active: false });
   const [isMounted, setIsMounted] = useState(false);
 
@@ -222,6 +223,7 @@ export default function ParticleText({
     const mx = mousePos.current.x;
     const my = mousePos.current.y;
     const mouseActive = mousePos.current.active;
+    let maxVel = 0;
 
     // Pure particles only: NO solid text clashing under the dots
     for (let i = 0; i < pts.length; i++) {
@@ -271,6 +273,9 @@ export default function ParticleText({
         p.vx *= FRICTION;
         p.vy *= FRICTION;
 
+        const velSq = p.vx * p.vx + p.vy * p.vy;
+        if (velSq > maxVel) maxVel = velSq;
+
         p.x += p.vx;
         p.y += p.vy;
       }
@@ -283,13 +288,27 @@ export default function ParticleText({
       ctx.fill();
     }
 
+    // Auto-sleep loop once letters assemble and settle — saves 100% CPU on mobile
+    if (elapsed > ANIM_DURATION + STAGGER_RANGE + 400 && !mouseActive && maxVel < 0.01) {
+      isLoopRunning.current = false;
+      return;
+    }
+
     rafId.current = requestAnimationFrame(loop);
   }, []);
+
+  /* ── Wake Animation Loop (only when needed) ── */
+  const wakeLoop = useCallback(() => {
+    if (isLoopRunning.current) return;
+    isLoopRunning.current = true;
+    rafId.current = requestAnimationFrame(loop);
+  }, [loop]);
 
   /* ── Start Animation ── */
   const startAnimation = useCallback(() => {
     cancelAnimationFrame(rafId.current);
     animStart.current = null;
+    isLoopRunning.current = true;
     rafId.current = requestAnimationFrame(loop);
   }, [loop]);
 
@@ -342,6 +361,7 @@ export default function ParticleText({
 
       if (x >= -60 && x <= rect.width + 60 && y >= -60 && y <= rect.height + 60) {
         mousePos.current = { x, y, active: true };
+        wakeLoop();
       } else {
         mousePos.current.active = false;
       }
@@ -356,6 +376,7 @@ export default function ParticleText({
 
       // If clicked near the canvas, trigger blast on nearby particles
       if (cx >= -40 && cx <= rect.width + 40 && cy >= -40 && cy <= rect.height + 40) {
+        wakeLoop();
         const BLAST_RADIUS = 220;
         const BLAST_FORCE = 35;
         for (let i = 0; i < particles.current.length; i++) {
@@ -377,9 +398,24 @@ export default function ParticleText({
       mousePos.current.active = false;
     };
 
-    window.addEventListener("pointermove", handleWindowPointerMove);
-    window.addEventListener("pointerdown", handleWindowPointerDown);
-    window.addEventListener("pointerleave", handleWindowPointerLeave);
+    // Pause physics completely when scrolled out of viewport
+    let observer: IntersectionObserver | null = null;
+    const container = containerRef.current;
+    if (container && typeof window !== "undefined" && "IntersectionObserver" in window) {
+      observer = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) {
+          cancelAnimationFrame(rafId.current);
+          isLoopRunning.current = false;
+        } else {
+          wakeLoop();
+        }
+      }, { threshold: 0.05 });
+      observer.observe(container);
+    }
+
+    window.addEventListener("pointermove", handleWindowPointerMove, { passive: true });
+    window.addEventListener("pointerdown", handleWindowPointerDown, { passive: true });
+    window.addEventListener("pointerleave", handleWindowPointerLeave, { passive: true });
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -387,9 +423,11 @@ export default function ParticleText({
       window.removeEventListener("pointerdown", handleWindowPointerDown);
       window.removeEventListener("pointerleave", handleWindowPointerLeave);
       window.removeEventListener("resize", handleResize);
+      observer?.disconnect();
       cancelAnimationFrame(rafId.current);
+      isLoopRunning.current = false;
     };
-  }, [isMounted, handleResize, startAnimation, resolvedTheme]);
+  }, [isMounted, handleResize, startAnimation, wakeLoop, resolvedTheme]);
 
   return (
     <div

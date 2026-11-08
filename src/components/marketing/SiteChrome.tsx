@@ -42,9 +42,18 @@ export function SiteHeader() {
     en: { login: "Login", demo: "Book a Demo", start: "Get Started", menu: "Menu", close: "Close" },
   });
 
-  // Track scroll for header elevation change
+  // Track scroll for header elevation change (throttled to 1 tick per frame)
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 15);
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 15);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

@@ -16,6 +16,10 @@ export function ScrollProgressBar() {
   });
 
   useEffect(() => {
+    // Only mount on desktop / fine pointer devices to save 100% of spring physics and scroll recalculations on mobile touch screens
+    if (typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches) {
+      return;
+    }
     setMounted(true);
   }, []);
 

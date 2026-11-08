@@ -30,9 +30,17 @@ import { VoiceNoteSimulator } from "@/components/marketing/VoiceNoteSimulator";
 
 function Hero() {
   const { dir } = useLang();
+  const [isTouch, setIsTouch] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const mockupY = useTransform(scrollYProgress, [0, 1], [0, 40]);
+
+  useEffect(() => {
+    setIsTouch(
+      typeof window !== "undefined" &&
+      (window.innerWidth < 768 || window.matchMedia("(pointer: coarse)").matches)
+    );
+  }, []);
 
   const t = useT({
     ar: {
@@ -167,7 +175,7 @@ function Hero() {
       {/* Floating Dashboard Mockup */}
       <motion.div
         className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 mt-14 sm:mt-20"
-        style={{ y: mockupY }}
+        style={{ y: isTouch ? 0 : mockupY }}
       >
         <TiltCard intensity={4} className="w-full">
           <div className="rounded-2xl sm:rounded-3xl border border-white/20 dark:border-white/15 bg-[#2a6b73] text-white shadow-[0_25px_70px_-15px_rgba(13,34,54,0.35)] dark:shadow-[0_25px_70px_-15px_rgba(0,0,0,0.85)] overflow-hidden">

@@ -881,19 +881,50 @@ select.input-base option { background: var(--bg); color: var(--fg); }
 }
 .animate-spin-slow { animation: spin-slow 12s linear infinite; }
 
-/* Continuous Marquee Animation */
+/* Continuous Marquee Animation — 100% GPU Hardware Accelerated 3D */
 @keyframes marquee-ltr {
-  0%   { transform: translateX(0%); }
-  100% { transform: translateX(-33.333%); }
+  0%   { transform: translate3d(0%, 0, 0); }
+  100% { transform: translate3d(-33.333%, 0, 0); }
 }
 @keyframes marquee-rtl {
-  0%   { transform: translateX(0%); }
-  100% { transform: translateX(33.333%); }
+  0%   { transform: translate3d(0%, 0, 0); }
+  100% { transform: translate3d(33.333%, 0, 0); }
 }
 .animate-marquee {
   animation: marquee-ltr 35s linear infinite;
   will-change: transform;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 [dir="rtl"] .animate-marquee {
   animation: marquee-rtl 35s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* ===== Ultra-Silky 120Hz Mobile Native Kinetic Touch Scrolling ===== */
+@media (pointer: coarse), (hover: none) {
+  .glass, .glass-strong, .card, .glass-ultra {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .glass-strong {
+    background: var(--bg-elev) !important;
+  }
+  .card, .glass, .glass-strong {
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  /* Nav bar on mobile only uses subtle blur */
+  .nav-blur {
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+  }
+  section {
+    contain: content;
+  }
 }

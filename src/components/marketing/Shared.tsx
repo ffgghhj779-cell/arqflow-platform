@@ -83,12 +83,13 @@ export function Reveal({
         x: 0,
         scale: 1,
       }}
-      viewport={{ once: true, margin: isTouch ? "40px 0px 0px 0px" : "-10px" }}
+      viewport={{ once: true, margin: isTouch ? "100px 0px 0px 0px" : "-10px" }}
       transition={{
         duration: dur,
         delay: del,
         ease: [0.22, 1, 0.36, 1],
       }}
+      style={{ willChange: isTouch ? "opacity, transform" : undefined }}
       className={className}
     >
       {children}
