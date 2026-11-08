@@ -64,7 +64,7 @@ export function WhatsAppFloatingButton() {
 
               {/* Icon Container */}
               <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[var(--accent)] via-[#d4af37] to-[var(--color-brand-navy)] p-[2px] flex items-center justify-center shrink-0 shadow-md transition-transform duration-300">
-                <div className="w-full h-full rounded-full bg-[#fbf8fc] flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full rounded-full bg-[#f8fbf9] flex items-center justify-center overflow-hidden">
                   <AnimatePresence mode="wait">
                     {isOpen ? (
                       <motion.div

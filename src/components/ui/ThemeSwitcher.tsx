@@ -65,7 +65,7 @@ export function ThemeSwitcher() {
             transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
             className={cn(
               "fixed left-0 right-0 h-screen w-screen z-[100] flex items-center justify-center",
-              nextTheme === "dark" ? "bg-[#1a2f3c]" : "bg-[#fbfaf7]"
+              nextTheme === "dark" ? "bg-[#1a2f3c]" : "bg-[#eef4f1]"
             )}
           >
             {/* Optional: Add a subtle loading indicator or brand mark inside the curtain */}

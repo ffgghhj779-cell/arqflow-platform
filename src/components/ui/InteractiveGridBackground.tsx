@@ -134,7 +134,7 @@ export default function InteractiveGridBackground() {
     const render = () => {
       const isDark = themeRef.current === "dark";
       // Clear canvas with light warm cream or dark navy background
-      ctx.fillStyle = isDark ? "#13232f" : "#fbfaf7";
+      ctx.fillStyle = isDark ? "#13232f" : "#eef4f1";
       ctx.fillRect(0, 0, width, height);
 
       const mouse = mouseRef.current;
