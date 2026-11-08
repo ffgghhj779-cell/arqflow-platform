@@ -29,8 +29,7 @@ function Hero() {
   const { dir } = useLang();
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const mockupY = useTransform(scrollYProgress, [0, 1], [0, 80]);
-  const mockupOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const mockupY = useTransform(scrollYProgress, [0, 1], [0, 40]);
 
   const t = useT({
     ar: {
@@ -165,40 +164,40 @@ function Hero() {
       {/* Floating Dashboard Mockup */}
       <motion.div
         className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 mt-14 sm:mt-20"
-        style={{ y: mockupY, opacity: mockupOpacity }}
+        style={{ y: mockupY }}
       >
-        <TiltCard intensity={5} className="w-full">
-          <div className="card-elevated overflow-hidden glow-navy">
+        <TiltCard intensity={4} className="w-full">
+          <div className="rounded-2xl sm:rounded-3xl border border-slate-700/60 dark:border-white/15 bg-[#070e17] text-white shadow-[0_25px_70px_-15px_rgba(14,32,56,0.35)] dark:shadow-[0_25px_70px_-15px_rgba(0,0,0,0.85)] overflow-hidden">
             {/* Mockup top bar */}
-            <div className="bg-[var(--bg-solid)] px-4 py-2.5 flex items-center gap-2 border-b border-app">
-              <div className="flex gap-1.5">
-                <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-                <div className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-                <div className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
+            <div className="bg-[#0b1523] px-4 py-3 flex items-center gap-2 border-b border-white/10">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-[#ff5f57] shadow-sm" />
+                <div className="w-3 h-3 rounded-full bg-[#febc2e] shadow-sm" />
+                <div className="w-3 h-3 rounded-full bg-[#28c840] shadow-sm" />
               </div>
               <div className="flex-1 flex justify-center">
-                <div className="bg-[var(--bg-solid-high)] rounded-md px-4 py-1 text-xs text-muted font-medium w-48 text-center">
+                <div className="bg-[#132238] border border-white/10 rounded-full px-4 py-1 text-xs text-slate-200 font-mono font-medium max-w-xs w-full text-center truncate">
                   dashboard.arqflow.app
                 </div>
               </div>
-              <div className="flex items-center gap-1.5">
-                <div className="w-2 h-2 rounded-full bg-success animate-pulse-soft" />
-                <span className="text-xs text-success font-semibold">{t.liveTag}</span>
+              <div className="flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full">
+                <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse-soft" />
+                <span className="text-xs text-emerald-400 font-bold">{t.liveTag}</span>
               </div>
             </div>
 
             {/* Mockup body */}
-            <div className="bg-[var(--bg)] p-3 sm:p-5 flex gap-3 sm:gap-5 min-h-[220px] sm:min-h-[280px]">
+            <div className="bg-[#08101a] p-3 sm:p-5 flex gap-3 sm:gap-5 min-h-[240px] sm:min-h-[300px]">
               {/* Sidebar mini */}
-              <div className="hidden sm:flex flex-col gap-1 w-36 shrink-0">
+              <div className="hidden sm:flex flex-col gap-1 w-36 shrink-0 border-e border-white/10 pe-3">
                 {["نظرة عامة", "المحادثات", "الطلبات", "العملاء", "التحليلات"].map((item, i) => (
                   <div
                     key={item}
                     className={cn(
-                      "text-xs px-3 py-2 rounded-lg font-medium transition-all",
+                      "text-xs px-3 py-2 rounded-lg font-semibold transition-all",
                       i === 1
-                        ? "bg-[rgba(var(--accent-rgb),0.15)] text-accent"
-                        : "text-muted"
+                        ? "bg-teal-500/20 text-teal-300 border border-teal-500/30"
+                        : "text-slate-400 hover:text-white"
                     )}
                   >
                     {item}
@@ -207,21 +206,23 @@ function Hero() {
               </div>
 
               {/* Chat area */}
-              <div className="flex-1 flex flex-col gap-2 overflow-hidden">
-                <div className="flex items-center gap-2 pb-2 border-b border-app">
-                  <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[var(--accent)] to-[var(--accent-mid)] flex items-center justify-center text-white text-xs font-bold">ع</div>
-                  <div>
-                    <p className="text-xs font-semibold">عميل جديد</p>
-                    <p className="text-[10px] text-muted">منذ ثانيتين</p>
+              <div className="flex-1 flex flex-col gap-3 overflow-hidden">
+                <div className="flex items-center gap-2.5 pb-2.5 border-b border-white/10">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white text-xs font-bold shadow-md">
+                    ع
                   </div>
-                  <div className="ms-auto flex items-center gap-1">
-                    <div className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
-                    <span className="text-[10px] text-success font-medium">مباشر</span>
+                  <div>
+                    <p className="text-xs font-bold text-white">عميل جديد</p>
+                    <p className="text-[10px] text-slate-400">منذ ثانيتين</p>
+                  </div>
+                  <div className="ms-auto flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">
+                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="text-[10px] text-emerald-400 font-bold">مباشر</span>
                   </div>
                 </div>
 
                 {/* Chat bubbles */}
-                <div className="flex flex-col gap-2 flex-1">
+                <div className="flex flex-col gap-2.5 flex-1 justify-center">
                   {bubbles.map((bubble, i) => (
                     <motion.div
                       key={i}
@@ -236,10 +237,10 @@ function Hero() {
                     >
                       <div
                         className={cn(
-                          "max-w-[75%] text-xs px-3 py-2 rounded-xl leading-relaxed",
+                          "max-w-[85%] sm:max-w-[75%] text-xs sm:text-sm px-3.5 py-2.5 rounded-2xl leading-relaxed shadow-sm",
                           bubble.from === "customer"
-                            ? "bg-[var(--bg-solid-high)] text-app rounded-ss-none"
-                            : "bg-[var(--accent)] text-white rounded-se-none"
+                            ? "bg-[#152438] text-slate-100 border border-white/10 rounded-ss-none font-medium"
+                            : "bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-se-none font-medium shadow-teal-500/20 shadow-md"
                         )}
                       >
                         {bubble.text}
@@ -250,16 +251,16 @@ function Hero() {
               </div>
 
               {/* Stats mini panel */}
-              <div className="hidden lg:flex flex-col gap-2 w-36 shrink-0">
+              <div className="hidden lg:flex flex-col gap-2.5 w-36 shrink-0 border-s border-white/10 ps-3">
                 {[
-                  { label: "محادثات اليوم", value: "٤٨", color: "text-accent", icon: MessageCircle },
-                  { label: "طلبات مؤكدة", value: "١٢", color: "text-success", icon: CheckCircle2 },
-                  { label: "متوسط الرد", value: "٣ث", color: "text-warning", icon: Clock },
+                  { label: "محادثات اليوم", value: "٤٨", color: "text-teal-400", icon: MessageCircle },
+                  { label: "طلبات مؤكدة", value: "١٢", color: "text-emerald-400", icon: CheckCircle2 },
+                  { label: "متوسط الرد", value: "٣ث", color: "text-amber-400", icon: Clock },
                 ].map((stat) => (
-                  <div key={stat.label} className="glass rounded-xl p-3">
-                    <stat.icon className={cn("w-3.5 h-3.5 mb-1", stat.color)} aria-hidden />
-                    <p className={cn("text-sm font-extrabold font-display", stat.color)}>{stat.value}</p>
-                    <p className="text-[10px] text-muted mt-0.5 leading-tight">{stat.label}</p>
+                  <div key={stat.label} className="bg-[#0e1b2c] border border-white/10 rounded-xl p-3 shadow-sm">
+                    <stat.icon className={cn("w-4 h-4 mb-1", stat.color)} aria-hidden />
+                    <p className={cn("text-base font-extrabold font-display", stat.color)}>{stat.value}</p>
+                    <p className="text-[10px] text-slate-300 mt-0.5 leading-tight">{stat.label}</p>
                   </div>
                 ))}
               </div>
