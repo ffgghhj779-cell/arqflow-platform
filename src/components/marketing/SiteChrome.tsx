@@ -62,6 +62,12 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40">
+      {/* Unmistakable Visual Banner to verify live repo deployment */}
+      <div className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 text-[#050b14] px-4 py-2 text-center text-xs sm:text-sm font-extrabold tracking-wide flex items-center justify-center gap-2 shadow-md">
+        <span className="w-2 h-2 rounded-full bg-black animate-ping" />
+        <span>⚡ VERIFIED LIVE REPO • ARQFLOW PLATFORM v2.0 ⚡</span>
+      </div>
+
       <motion.div
         className="glass-strong !rounded-none border-x-0 border-t-0"
         animate={{
